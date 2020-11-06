@@ -1,0 +1,14 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "DWJ P3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./dart-sass/main.scss:./css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
