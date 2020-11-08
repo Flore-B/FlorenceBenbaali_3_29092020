@@ -45,6 +45,7 @@
 
 }
 @import "./utils/variables";
+@import "./layouts/form.scss";
 
 html, body {
     padding: 0;
@@ -62,6 +63,8 @@ header img {
 }
 .search__form {
     display: flex;
+    
+    
     background-color: #E1DFDF;
    &__search__input {
        width: 100%;
@@ -74,11 +77,10 @@ header img {
        font-weight: bold;
    }
    i {
-       position: relative;
-       left: 80px;
-       top: 16px;
-       color: #323232;
-       align-self: baseline;
+    position: relative;
+    top: 16px;
+    left: 90px;
+    color: $color-icon;
    }
     }
     .search__heading {
@@ -90,13 +92,13 @@ header img {
         h1 {
             font-family: $text-title-font;
             font-weight: bold;
-            font-size: 18px;
-            margin: 0 50px;
+            font-size: 20px;
+            margin: 0 40px;
             padding-top: 40px;
         }
         p {
             font-family: $text-title-font;   
-            color: #323232;
+            color: $color-icon;
             font-size: 16px;
             padding-bottom: 20px;
             margin: 15px;
@@ -108,15 +110,12 @@ header img {
     padding: 10px 20px;
     a {
         text-decoration: none;
-        color: #fff
+        color: $color-white;
     }
     }
 .search__nav {
-    h1 {
-        font-family: $text-title-font;
-        font-weight: bold;
-        margin: 20px 0 10px 20px;
-        font-size: 20px;
+    h2 {
+        @include title-h2;
     }
     ul {
         display: flex;
@@ -131,18 +130,18 @@ header img {
     }
     li {
         display: flex;
+        position: relative;
         width: 90%;
-        margin: 10px;
-        margin-right: 20px;
+        margin: 10px 20px 10px 10px;
+        padding-left: 8px;
     }
     &__icon {
         padding-right: 15px;
-        color: #646363;
         font-size: 14px;
     }
     &__number {
         position: absolute;
-        left: 8px;
+        left: 0;
         align-self: center;
         border-radius: 100%;
         background-color: $color-primary;
@@ -150,7 +149,7 @@ header img {
         font-size: 12px;
         width: 20px;
         height: 20px;
-        color: #fff;
+        color: $color-white;
     }
     a {
         width: 80%;
@@ -162,7 +161,7 @@ header img {
         box-shadow: 2px 4px 10px #E1DFDF;
         padding: 20px;
         text-decoration: none;
-        color: black; 
+        color: $color-black; 
         padding-left: 35px;
 
     }
@@ -171,11 +170,8 @@ header img {
     height: 1060px;
     padding-top: 15px;
     background-color: #eeeeee;
-    h1 {
-        font-family: $text-title-font;
-        font-weight: bold;
-        margin: 20px 0 10px 20px; 
-        font-size: 20px;
+    h2 {
+        @include title-h2;
         text-align: left;
     }
 }
@@ -183,7 +179,12 @@ header img {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   a {
+        text-decoration: none;
+        color: $color-black;
+   }
     &__card {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -203,34 +204,34 @@ header img {
         right: 20px;
         padding: 5px 10px;
         font-size: 14px;
-    
     }
     figcaption {
         width: 290px;
         height: 70px;
         font-family: $text-font;
-        background-color: #fff;
+        background-color: $color-white;
         border-radius: 0 0 20px 20px;
-        h2 {
+        h3 {
             margin: 10px 10px 0 10px;
             font-size: 16px;
         }
         p {
             margin: 0 0 10px 10px;
-            color: #646363; 
+            color: $color-icon; 
         }
         i {
             position: absolute;
-            left: 270px;
-            font-size: 20px;
-            color: #646363;
+            left: 250px;
+            bottom: 30px;
+            font-size: 22px;
+            color: $color-icon;
         }
     }
 } 
 }
 footer {
-    background-color: #000000;
-    color: #fff;
+    background-color: $color-black;
+    color: $color-white;
     p {
         margin: 0 0  15px 20px;
     }
@@ -238,8 +239,6 @@ footer {
         font-family: $logo-font;
         width: 30%;
         padding-top: 20px;
-       
-        
     }
     ul {
         padding: 0 0 30px 20px;
@@ -247,13 +246,11 @@ footer {
     }
     li {
         list-style-type: none;
-        padding-bottom: 5px;
-        
-        
+        padding-bottom: 5px;  
     }
     a {
         text-decoration: none;
-        color: #fff;
+        color: $color-white;
         font-family: $text-font;
         font-size: 14px;
     }
@@ -262,3 +259,86 @@ footer {
         padding-left: 0;
     }
 }
+.page1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    figure {
+        margin: 0;
+        height: 280px;
+    }
+    img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        margin-top: 10px;
+        }
+    figcaption {
+        width: 100%;
+        height: 74px;
+        position: relative;
+        bottom: 40px;
+        font-family: $text-font;
+        background-color: #eeeeee;
+        border-radius: 20px 20px 0 0;
+    h1 {
+        font-family: $logo-font;
+        padding: 30px 10px 0 10px;
+        font-size: 22px;
+            }
+            i {
+                position: absolute;
+                top: 30px;
+                left: 260px;
+                font-size: 22px;
+                color: $color-icon;
+            }
+        }
+    }
+    .container__page {
+        background-color: #eeeeee;
+        height: 600px;
+        padding-left: 10px;
+        padding-right: 10px;
+        .block1 {
+           
+            font-family: $text-font;
+            h2 {
+                color: $color-icon;
+                font-size: 20px;
+            }
+            ul {
+                padding: 0;
+                
+            }
+            li {
+                height: 62px;
+                list-style-type: none;
+                border-radius: 18px;
+                background-color: $color-white;
+                margin-bottom: 14px;
+                h3 {
+                    padding: 10px 0 0 10px;
+                    margin: 0;
+                    font-size: 16px;
+                }
+                p {
+                    padding: 0 0 0 10px;
+                    margin: 0;
+                    font-size: 14px;
+                }
+                a {
+                    position: absolute;
+                    text-decoration: none;
+                    color: $color-black;
+                 }
+                }
+            &__number {
+                position: absolute;
+                left: 260px;
+                top: 20px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }

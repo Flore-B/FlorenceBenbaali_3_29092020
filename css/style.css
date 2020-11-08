@@ -59,10 +59,9 @@ header img {
 }
 .search__form i {
   position: relative;
-  left: 80px;
   top: 16px;
-  color: #323232;
-  align-self: baseline;
+  left: 90px;
+  color: #646363;
 }
 
 .search__heading {
@@ -75,13 +74,13 @@ header img {
 .search__heading h1 {
   font-family: "robotoblack", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 18px;
-  margin: 0 50px;
+  font-size: 20px;
+  margin: 0 40px;
   padding-top: 40px;
 }
 .search__heading p {
   font-family: "robotoblack", Arial, Helvetica, sans-serif;
-  color: #323232;
+  color: #646363;
   font-size: 16px;
   padding-bottom: 20px;
   margin: 15px;
@@ -97,7 +96,7 @@ header img {
   color: #fff;
 }
 
-.search__nav h1 {
+.search__nav h2 {
   font-family: "robotoblack", Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: 20px 0 10px 20px;
@@ -116,18 +115,18 @@ header img {
 }
 .search__nav li {
   display: flex;
+  position: relative;
   width: 90%;
-  margin: 10px;
-  margin-right: 20px;
+  margin: 10px 20px 10px 10px;
+  padding-left: 8px;
 }
 .search__nav__icon {
   padding-right: 15px;
-  color: #646363;
   font-size: 14px;
 }
 .search__nav__number {
   position: absolute;
-  left: 8px;
+  left: 0;
   align-self: center;
   border-radius: 100%;
   background-color: #9356DC;
@@ -147,7 +146,7 @@ header img {
   box-shadow: 2px 4px 10px #E1DFDF;
   padding: 20px;
   text-decoration: none;
-  color: black;
+  color: #000;
   padding-left: 35px;
 }
 
@@ -156,7 +155,7 @@ header img {
   padding-top: 15px;
   background-color: #eeeeee;
 }
-.container h1 {
+.container h2 {
   font-family: "robotoblack", Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: 20px 0 10px 20px;
@@ -169,7 +168,12 @@ header img {
   flex-wrap: wrap;
   justify-content: center;
 }
+.container__result a {
+  text-decoration: none;
+  color: #000;
+}
 .container__result__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,7 +202,7 @@ header img {
   background-color: #fff;
   border-radius: 0 0 20px 20px;
 }
-.container__result__card figcaption h2 {
+.container__result__card figcaption h3 {
   margin: 10px 10px 0 10px;
   font-size: 16px;
 }
@@ -208,13 +212,14 @@ header img {
 }
 .container__result__card figcaption i {
   position: absolute;
-  left: 270px;
-  font-size: 20px;
+  left: 250px;
+  bottom: 30px;
+  font-size: 22px;
   color: #646363;
 }
 
 footer {
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
 }
 footer p {
@@ -242,6 +247,89 @@ footer a {
 footer i {
   padding-right: 15px;
   padding-left: 0;
+}
+
+.page1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.page1 figure {
+  margin: 0;
+  height: 280px;
+}
+.page1 img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+.page1 figcaption {
+  width: 100%;
+  height: 74px;
+  position: relative;
+  bottom: 40px;
+  font-family: "robotoregular", Arial, Helvetica, sans-serif;
+  background-color: #eeeeee;
+  border-radius: 20px 20px 0 0;
+}
+.page1 figcaption h1 {
+  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
+  padding: 30px 10px 0 10px;
+  font-size: 22px;
+}
+.page1 figcaption i {
+  position: absolute;
+  top: 30px;
+  left: 260px;
+  font-size: 22px;
+  color: #646363;
+}
+
+.container__page {
+  background-color: #eeeeee;
+  height: 600px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.container__page .block1 {
+  font-family: "robotoregular", Arial, Helvetica, sans-serif;
+}
+.container__page .block1 h2 {
+  color: #646363;
+  font-size: 20px;
+}
+.container__page .block1 ul {
+  padding: 0;
+}
+.container__page .block1 li {
+  height: 62px;
+  list-style-type: none;
+  border-radius: 18px;
+  background-color: #fff;
+  margin-bottom: 14px;
+}
+.container__page .block1 li h3 {
+  padding: 10px 0 0 10px;
+  margin: 0;
+  font-size: 16px;
+}
+.container__page .block1 li p {
+  padding: 0 0 0 10px;
+  margin: 0;
+  font-size: 14px;
+}
+.container__page .block1 li a {
+  position: absolute;
+  text-decoration: none;
+  color: #000;
+}
+.container__page .block1__number {
+  position: absolute;
+  left: 260px;
+  top: 20px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
