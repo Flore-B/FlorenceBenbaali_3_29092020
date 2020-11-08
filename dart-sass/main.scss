@@ -63,8 +63,6 @@ header img {
 }
 .search__form {
     display: flex;
-    
-    
     background-color: #E1DFDF;
    &__search__input {
        width: 100%;
@@ -104,10 +102,11 @@ header img {
             margin: 15px;
         }
     }
-.search__heading-btn {
+.search {
+    &__btn {
     border-radius: 20px;
     background-color: $color-secondary; 
-    padding: 10px 20px;
+    padding: 10px 20px;}
     a {
         text-decoration: none;
         color: $color-white;
@@ -131,7 +130,7 @@ header img {
     li {
         display: flex;
         position: relative;
-        width: 90%;
+        width: 400px;
         margin: 10px 20px 10px 10px;
         padding-left: 8px;
     }
@@ -229,37 +228,8 @@ header img {
     }
 } 
 }
-footer {
-    background-color: $color-black;
-    color: $color-white;
-    p {
-        margin: 0 0  15px 20px;
-    }
-    img {
-        font-family: $logo-font;
-        width: 30%;
-        padding-top: 20px;
-    }
-    ul {
-        padding: 0 0 30px 20px;
-        margin: 0;
-    }
-    li {
-        list-style-type: none;
-        padding-bottom: 5px;  
-    }
-    a {
-        text-decoration: none;
-        color: $color-white;
-        font-family: $text-font;
-        font-size: 14px;
-    }
-    i {
-        padding-right: 15px;
-        padding-left: 0;
-    }
-}
-.page1 {
+
+.page {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -296,19 +266,23 @@ footer {
         }
     }
     .container__page {
+        height: 100%;
         background-color: #eeeeee;
-        height: 600px;
         padding-left: 10px;
         padding-right: 10px;
         .block1 {
-           
+          
             font-family: $text-font;
             h2 {
+                text-decoration: underline;
+                text-decoration-color: $color-tertiary;
+                text-underline-position: under;
                 color: $color-icon;
                 font-size: 20px;
             }
             ul {
                 padding: 0;
+                margin-bottom: 30px;
                 
             }
             li {
@@ -316,6 +290,7 @@ footer {
                 list-style-type: none;
                 border-radius: 18px;
                 background-color: $color-white;
+                box-shadow: 2px 4px 10px #E1DFDF;
                 margin-bottom: 14px;
                 h3 {
                     padding: 10px 0 0 10px;
@@ -335,10 +310,55 @@ footer {
                 }
             &__number {
                 position: absolute;
-                left: 260px;
+                left: 270px;
                 top: 20px;
                 font-size: 14px;
                 font-weight: bold;
+            }   
+            &__form {
+                text-align: center;
+                button {
+                width: 160px;
+                border-radius: 20px;
+                border: none;
+                background-color: $color-secondary; 
+                font-family: $text-font;
+                color: $color-white;
+                padding: 10px 20px;
+                margin-bottom: 40px;
             }
+            }
+
+        }
+    }
+    footer { 
+        display: block;
+        background-color: $color-black;
+        color: $color-white;
+        p {
+            margin: 0 0  15px 20px;
+        }
+        img {
+            font-family: $logo-font;
+            width: 30%;
+            padding-top: 20px;
+        }
+        ul {
+            padding: 0 0 30px 20px;
+            margin: 0;
+        }
+        li {
+            list-style-type: none;
+            padding-bottom: 5px;  
+        }
+        a {
+            text-decoration: none;
+            color: $color-white;
+            font-family: $text-font;
+            font-size: 14px;
+        }
+        i {
+            padding-right: 15px;
+            padding-left: 0;
         }
     }
