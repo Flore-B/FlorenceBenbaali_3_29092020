@@ -75,7 +75,6 @@ header img {
         margin-bottom: 1.25rem;
     }
    &__search__input {
-       position: relative;
        width: 100%;
        height: 3rem;
        background-color: transparent;
@@ -154,7 +153,7 @@ header img {
         display: flex;
         position: relative;
         width: 25rem;
-        margin: 0.625rem 1.25rem 0.625rem 0.625rem;
+        margin: 0.625rem 1.25rem 0.625rem 1.25rem;
         padding-left: 0.5rem;
     }
     &__icon {
@@ -226,7 +225,7 @@ header img {
         background-color: $color-tertiary;
         font-family: $text-font;
         
-        color:#44ad92;
+        color:#03a880;
         position: absolute;
         right: 1.25rem;
         padding: 0.31rem 0.62rem;
@@ -313,11 +312,12 @@ header img {
             }
             li {
                 display: flex;
-                height: 3.75rem;
+                position: relative;
                 list-style-type: none;
                 border-radius: 1.125rem;
                 background-color: $color-white;
                 box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
+                padding-bottom: 0.625rem;
                 margin-bottom: 0.875rem;
                 h3 {
                     padding: 0.625rem 0 0 0.625rem;
@@ -327,10 +327,9 @@ header img {
                 p {
                     padding: 0 2.5rem 0 0.625rem;
                     margin: 0;
-                    font-size: map-get($font-size, p)
+                    font-size: 0.875rem;
                 }
                 a {
-                    position: absolute;
                     text-decoration: none;
                     color: $color-black;
                  }
