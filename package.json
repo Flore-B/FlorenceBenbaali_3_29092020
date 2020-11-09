@@ -4,10 +4,12 @@
   "description": "DWJ P3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./dart-sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./dart-sass/main.scss:./css/style.css",
+    "prefix": "postcss .n/css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "dependencies": {
     "normalize.css": "^8.0.1"
   }
