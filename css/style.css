@@ -110,7 +110,7 @@ html, body {
   background-color: transparent;
   border: none;
   text-align: center;
-  font-family: "robotoregular", Arial, Helvetica, sans-serif;
+  font-family: "robotoblack", Arial, Helvetica, sans-serif;
   font-size: 0.938rem;
 }
 @media screen and (min-width: 680px) {
@@ -151,7 +151,7 @@ html, body {
   padding-top: 2.5rem;
 }
 .search__heading p {
-  font-family: "robotoblack", Arial, Helvetica, sans-serif;
+  font-family: "robotoregular", Arial, Helvetica, sans-serif;
   color: #646363;
   font-size: 1rem;
   padding-bottom: 1.25rem;
@@ -160,7 +160,7 @@ html, body {
 
 .search__btn {
   border-radius: 1.25rem;
-  background-image: linear-gradient(to right, #FF79DA, #ac007d);
+  background-image: linear-gradient(170deg, #FF79DA, 70%, #9356DC);
   padding: 0.6rem 1.25rem;
 }
 .search a {
@@ -225,6 +225,11 @@ html, body {
   text-decoration: none;
   color: #000;
   padding-left: 2.2rem;
+  transition: background-color, box-shadow 300ms;
+}
+.search__nav a:hover {
+  background-color: #efe6fa;
+  box-shadow: 0.125rem 0.25rem 0.625rem #777777;
 }
 @media screen and (min-width: 680px) {
   .search__nav a {
@@ -379,17 +384,19 @@ html, body {
   font-size: 1rem;
 }
 .container__page .block1 li p {
+  text-overflow: ellipsis;
   padding: 0 2.5rem 0 0.625rem;
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 .container__page .block1 li a {
+  width: 96%;
   text-decoration: none;
   color: #000;
 }
 .container__page .block1__number {
   position: absolute;
-  right: 2rem;
+  right: 1rem;
   top: 1.875rem;
   font-size: 0.875rem;
   font-weight: bold;
@@ -401,7 +408,8 @@ html, body {
   width: 10rem;
   border-radius: 1.25rem;
   border: none;
-  background-image: linear-gradient(to right, #FF79DA, #ac007d);
+  background-image: linear-gradient(170deg, #FF79DA, 70%, #9356DC);
+  box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
   color: #fff;
   padding: 0.625rem 1.25rem;
