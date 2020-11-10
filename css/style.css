@@ -1,28 +1,33 @@
-@font-face {
-  font-family: "shrikhandregular";
-  src: url("../fonts/shrikhand-regular-webfont.eot");
-  src: url("../fonts/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/shrikhand-regular-webfont.woff2") format("woff2"), url("../fonts/shrikhand-regular-webfont.woff") format("woff"), url("../fonts/shrikhand-regular-webfont.ttf") format("truetype"), url("../fonts/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+footer {
+  display: block;
+  background-color: #000;
+  color: #fff;
 }
-@font-face {
-  font-family: "robotoregular";
-  src: url("../fonts/roboto-regular-webfont.eot");
-  src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+footer p {
+  margin: 0 0 0.875rem 1.25rem;
 }
-@font-face {
-  font-family: "robotoblack";
-  src: url("../fonts/roboto-black-webfont.eot");
-  src: url("../fonts/roboto-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-black-webfont.woff2") format("woff2"), url("../fonts/roboto-black-webfont.woff") format("woff"), url("../fonts/roboto-black-webfont.ttf") format("truetype"), url("../fonts/roboto-black-webfont.svg#robotoblack") format("svg");
-  font-weight: normal;
-  font-style: normal;
+footer img {
+  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
+  width: 30%;
+  padding-top: 1.25rem;
 }
-html, body {
-  font-size: 100%;
-  padding: 0;
+footer ul {
+  padding: 0 0 1.75rem 1.25rem;
   margin: 0;
+}
+footer li {
+  list-style-type: none;
+  padding-bottom: 0.313rem;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "robotoregular", Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+footer i {
+  padding-right: 0.875rem;
+  padding-left: 0;
 }
 
 header {
@@ -50,13 +55,45 @@ header img {
   }
 }
 
+html, body {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("../fonts/shrikhand-regular-webfont.eot");
+  src: url("../fonts/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/shrikhand-regular-webfont.woff2") format("woff2"), url("../fonts/shrikhand-regular-webfont.woff") format("woff"), url("../fonts/shrikhand-regular-webfont.ttf") format("truetype"), url("../fonts/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoregular";
+  src: url("../fonts/roboto-regular-webfont.eot");
+  src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoblack";
+  src: url("../fonts/roboto-black-webfont.eot");
+  src: url("../fonts/roboto-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-black-webfont.woff2") format("woff2"), url("../fonts/roboto-black-webfont.woff") format("woff"), url("../fonts/roboto-black-webfont.ttf") format("truetype"), url("../fonts/roboto-black-webfont.svg#robotoblack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 .search {
   margin: 0.625rem 0 2.5rem 0;
 }
 
 .search__form {
   background-color: #E1DFDF;
+}
+.search__form .search__place {
   position: relative;
+  width: 10.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 680px) {
   .search__form {
@@ -78,19 +115,18 @@ header img {
 }
 @media screen and (min-width: 680px) {
   .search__form__search__input {
-    font-size: 1.1 rem;
+    font-size: 1.1rem;
+    padding-left: 1.4rem;
   }
 }
-.search__form i {
+.search__form .input__icon {
   position: absolute;
   color: #646363;
   font-size: 1rem;
   top: 1rem;
-  left: 5.25rem;
 }
 @media screen and (min-width: 680px) {
-  .search__form i {
-    left: 8rem;
+  .search__form .input__icon {
     font-size: 0.9rem;
   }
 }
@@ -295,12 +331,16 @@ header img {
   padding: 1.75rem 0.625rem 0 0.625rem;
   font-size: 1.25rem;
 }
-.page figcaption i {
+.page figcaption .title__icon {
   position: absolute;
   color: #646363;
   font-size: 1rem;
-  top: 1.75rem;
-  left: 16.25rem;
+  top: 1rem;
+  right: 4rem;
+}
+.page figcaption .title__icon i {
+  font-size: 1.4rem;
+  color: #646363;
 }
 
 .container__page {
@@ -349,7 +389,7 @@ header img {
 }
 .container__page .block1__number {
   position: absolute;
-  left: 16.75rem;
+  right: 2rem;
   top: 1.875rem;
   font-size: 0.875rem;
   font-weight: bold;
@@ -366,38 +406,6 @@ header img {
   color: #fff;
   padding: 0.625rem 1.25rem;
   margin-bottom: 2.5rem;
-}
-
-footer {
-  display: block;
-  background-color: #000;
-  color: #fff;
-}
-footer p {
-  margin: 0 0 0.875rem 1.25rem;
-}
-footer img {
-  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
-  width: 30%;
-  padding-top: 1.25rem;
-}
-footer ul {
-  padding: 0 0 1.75rem 1.25rem;
-  margin: 0;
-}
-footer li {
-  list-style-type: none;
-  padding-bottom: 0.313rem;
-}
-footer a {
-  text-decoration: none;
-  color: #fff;
-  font-family: "robotoregular", Arial, Helvetica, sans-serif;
-  font-size: 0.875rem;
-}
-footer i {
-  padding-right: 0.875rem;
-  padding-left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

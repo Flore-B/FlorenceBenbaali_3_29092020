@@ -13,19 +13,3 @@ $color-icon: #646363;
 $font-size: (h1: 1.25rem, h2: 1.1rem, h3: 1rem, h4: 0.9rem, p: 1rem, a: 0.875rem);
 $breakpoints: (medium: 680px, large: 1360px);
 
-@mixin title-h2 {
-    font-family: $text-title-font;
-    font-weight: bold;
-    margin: 1.25rem 0 0.625rem 1.25rem; 
-    font-size: map-get($font-size, h2)
-}
-@mixin icon {
-    position: absolute;
-    color: $color-icon;
-    font-size: 1rem;
-}
-@mixin medium {
-    @media screen and (min-width: map-get($breakpoints, medium)) {
-        @content;
-    }
-}
