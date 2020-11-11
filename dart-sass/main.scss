@@ -13,6 +13,9 @@
 }
 .search__form {
     background-color: #E1DFDF;
+    @include medium {
+        background-color: $color-white;
+    }
     .search__place {
         position: relative;
         width: 10.5rem;
@@ -23,8 +26,6 @@
         width: 30%;
         margin-left: auto;
         margin-right: auto;
-        border-radius: 1.25rem;
-        margin-bottom: 1.25rem;
     }
    &__search__input {
        width: 100%;
@@ -53,9 +54,7 @@
         text-align: center;
         background-color: #eeeeee;
         margin-bottom: 1.875rem;
-        @include medium {
-            background: none;
-        }
+      
         h1 {
             font-family: $text-title-font;
             font-weight: bold;
@@ -72,10 +71,8 @@
         }
     }
 .search {
-    &__btn {
-    border-radius: 1.25rem;    
-    background-image: linear-gradient(170deg, $color-secondary, 70%, $color-primary);
-    padding: 0.6rem 1.25rem;
+    button {
+    @include button;
 }
     a {
         text-decoration: none;
@@ -83,12 +80,12 @@
     }
     }
 .search__nav {
-    @include medium {
-        background-color: #e1dfdf;
-    }
     h2 {
         @include title-h2;
+        @include medium {
+            padding-top: 1rem;
     }
+}
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -130,7 +127,7 @@
         border-radius: 1.12rem;
         text-align: left;
         background-color: #eeeeee; 
-        box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
+        box-shadow: 2px 4px 10px #b5b5b5;
         padding: 1.25rem;
         text-decoration: none;
         color: $color-black; 
@@ -138,7 +135,8 @@
         transition: background-color, box-shadow 300ms;
         &:hover {
             background-color: $light-main-btn;
-            box-shadow:  0.125rem 0.25rem 0.625rem #777777;
+            box-shadow:  2px 4px 10px #777777;
+            color: red;
         }
         @include medium {
             background-color: $color-white;
@@ -169,17 +167,19 @@
         align-items: center;
         width: 20rem;
         margin: 0.62rem;
+        
     img {
         width: 18rem;
         height: 9.4rem;
         object-fit: cover;
         border-radius: 1.25rem 1.25rem 0 0;
-        
+        &:hover {
+            opacity: 0.6;  
+    }
     }
     h4 {
         background-color: $color-tertiary;
         font-family: $text-font;
-        
         color:#03a880;
         position: absolute;
         right: 1.25rem;
@@ -277,7 +277,11 @@
                 background-color: $color-white;
                 box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
                 padding-bottom: 0.625rem;
-                margin-bottom: 0.875rem;
+                margin-bottom: 0.875rem; 
+                transition: box-shadow 300ms;
+                &:hover {
+                    box-shadow: 2px 4px 10px #777777;
+                }
                 h3 {
                     padding: 0.625rem 0 0 0.625rem;
                     margin: 0;
@@ -305,18 +309,10 @@
             &__form {
                 text-align: center;
                 button {
-                width: 10rem;
-                border-radius: 1.25rem;
-                border: none;
-                background-image: linear-gradient(170deg, $color-secondary, 70%, $color-primary);
-                box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
-                font-family: $text-font;
-                color: $color-white;
-                padding: 0.625rem 1.25rem;
+                @include button;
                 margin-bottom: 2.5rem;
+                }
             }
             }
-
-        }
-    }
+ }
     

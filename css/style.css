@@ -46,7 +46,7 @@ header img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.625rem;
-  width: 50%;
+  width: 45%;
   margin-top: 1.25rem;
 }
 @media screen and (min-width: 680px) {
@@ -89,6 +89,11 @@ html, body {
 .search__form {
   background-color: #E1DFDF;
 }
+@media screen and (min-width: 680px) {
+  .search__form {
+    background-color: #fff;
+  }
+}
 .search__form .search__place {
   position: relative;
   width: 10.5rem;
@@ -100,8 +105,6 @@ html, body {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 1.25rem;
-    margin-bottom: 1.25rem;
   }
 }
 .search__form__search__input {
@@ -138,11 +141,6 @@ html, body {
   background-color: #eeeeee;
   margin-bottom: 1.875rem;
 }
-@media screen and (min-width: 680px) {
-  .search__heading {
-    background: none;
-  }
-}
 .search__heading h1 {
   font-family: "robotoblack", Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -158,26 +156,37 @@ html, body {
   margin: 0.9rem;
 }
 
-.search__btn {
+.search button {
+  width: 200px;
   border-radius: 1.25rem;
+  border: none;
   background-image: linear-gradient(170deg, #FF79DA, 70%, #9356DC);
-  padding: 0.6rem 1.25rem;
+  box-shadow: 2px 4px 10px #b5b5b5;
+  font-family: "robotoregular", Arial, Helvetica, sans-serif;
+  color: #fff;
+  padding: 12px;
+  transform: scale(1);
+  transition: transform 400ms;
+}
+.search button:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 4px 10px #777777;
 }
 .search a {
   text-decoration: none;
   color: #fff;
 }
 
-@media screen and (min-width: 680px) {
-  .search__nav {
-    background-color: #e1dfdf;
-  }
-}
 .search__nav h2 {
   font-family: "robotoblack", Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: 1.25rem 0 0.625rem 1.25rem;
   font-size: 1.1rem;
+}
+@media screen and (min-width: 680px) {
+  .search__nav h2 {
+    padding-top: 1rem;
+  }
 }
 .search__nav ul {
   display: flex;
@@ -220,7 +229,7 @@ html, body {
   border-radius: 1.12rem;
   text-align: left;
   background-color: #eeeeee;
-  box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
+  box-shadow: 2px 4px 10px #b5b5b5;
   padding: 1.25rem;
   text-decoration: none;
   color: #000;
@@ -229,7 +238,8 @@ html, body {
 }
 .search__nav a:hover {
   background-color: #efe6fa;
-  box-shadow: 0.125rem 0.25rem 0.625rem #777777;
+  box-shadow: 2px 4px 10px #777777;
+  color: red;
 }
 @media screen and (min-width: 680px) {
   .search__nav a {
@@ -272,6 +282,9 @@ html, body {
   height: 9.4rem;
   object-fit: cover;
   border-radius: 1.25rem 1.25rem 0 0;
+}
+.container__result__card img:hover {
+  opacity: 0.6;
 }
 .container__result__card h4 {
   background-color: #99E2D0;
@@ -377,6 +390,10 @@ html, body {
   box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
   padding-bottom: 0.625rem;
   margin-bottom: 0.875rem;
+  transition: box-shadow 300ms;
+}
+.container__page .block1 li:hover {
+  box-shadow: 2px 4px 10px #777777;
 }
 .container__page .block1 li h3 {
   padding: 0.625rem 0 0 0.625rem;
@@ -405,15 +422,21 @@ html, body {
   text-align: center;
 }
 .container__page .block1__form button {
-  width: 10rem;
+  width: 200px;
   border-radius: 1.25rem;
   border: none;
   background-image: linear-gradient(170deg, #FF79DA, 70%, #9356DC);
-  box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
+  box-shadow: 2px 4px 10px #b5b5b5;
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
   color: #fff;
-  padding: 0.625rem 1.25rem;
+  padding: 12px;
+  transform: scale(1);
+  transition: transform 400ms;
   margin-bottom: 2.5rem;
+}
+.container__page .block1__form button:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 4px 10px #777777;
 }
 
 /*# sourceMappingURL=style.css.map */
