@@ -87,7 +87,7 @@ html, body {
 }
 
 .search__form {
-  background-color: #E1DFDF;
+  background-color: #EAEAEA;
 }
 @media screen and (min-width: 680px) {
   .search__form {
@@ -108,7 +108,6 @@ html, body {
   }
 }
 .search__form__search__input {
-  width: 100%;
   height: 3rem;
   background-color: transparent;
   border: none;
@@ -124,7 +123,7 @@ html, body {
 }
 .search__form .input__icon {
   position: absolute;
-  color: #646363;
+  color: #7E7E7E;
   font-size: 1rem;
   top: 1rem;
 }
@@ -135,10 +134,11 @@ html, body {
 }
 
 .search__heading {
-  height: 15.625rem;
+  height: 220px;
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
+  line-height: 1.2em;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #f6f6f6;
   margin-bottom: 1.875rem;
 }
 .search__heading h1 {
@@ -146,14 +146,13 @@ html, body {
   font-weight: bold;
   font-size: 1.25rem;
   margin: 0 2.5rem;
-  padding-top: 2.5rem;
+  padding-top: 24px;
 }
-.search__heading p {
+.search__heading h4 {
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
-  color: #646363;
-  font-size: 1rem;
-  padding-bottom: 1.25rem;
-  margin: 0.9rem;
+  font-weight: normal;
+  color: #7E7E7E;
+  font-size: 0.9rem;
 }
 
 .search button {
@@ -161,12 +160,12 @@ html, body {
   border-radius: 1.25rem;
   border: none;
   background-image: linear-gradient(170deg, #FF79DA, 70%, #9356DC);
-  box-shadow: 2px 4px 10px #b5b5b5;
+  box-shadow: 2px 4px 10px #cccccc;
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
   color: #fff;
   padding: 12px;
   transform: scale(1);
-  transition: transform 400ms;
+  transition: transform 1000ms;
 }
 .search button:hover {
   transform: scale(1.2);
@@ -181,7 +180,7 @@ html, body {
   font-family: "robotoblack", Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: 1.25rem 0 0.625rem 1.25rem;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 @media screen and (min-width: 680px) {
   .search__nav h2 {
@@ -191,22 +190,20 @@ html, body {
 .search__nav ul {
   display: flex;
   flex-wrap: wrap;
-  list-style-type: none;
   justify-content: center;
   text-align: center;
   font-weight: bold;
-  font-size: 0.9rem;
   padding: 0;
-  margin: 0;
 }
 .search__nav li {
   display: flex;
   position: relative;
-  width: 25rem;
+  width: 300px;
   margin: 0.625rem 1.25rem 0.625rem 1.25rem;
   padding-left: 0.5rem;
 }
 .search__nav__icon {
+  color: #7E7E7E;
   padding-right: 0.9rem;
   font-size: 0.9rem;
 }
@@ -228,8 +225,8 @@ html, body {
   font-size: 0.875rem;
   border-radius: 1.12rem;
   text-align: left;
-  background-color: #eeeeee;
-  box-shadow: 2px 4px 10px #b5b5b5;
+  background-color: #f6f6f6;
+  box-shadow: 2px 4px 10px #cccccc;
   padding: 1.25rem;
   text-decoration: none;
   color: #000;
@@ -239,7 +236,9 @@ html, body {
 .search__nav a:hover {
   background-color: #efe6fa;
   box-shadow: 2px 4px 10px #777777;
-  color: red;
+}
+.search__nav a:hover i {
+  color: #9356DC;
 }
 @media screen and (min-width: 680px) {
   .search__nav a {
@@ -250,13 +249,13 @@ html, body {
 .container {
   height: 66.25rem;
   padding-top: 0.9rem;
-  background-color: #eeeeee;
+  background-color: #f6f6f6;
 }
 .container h2 {
   font-family: "robotoblack", Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: 1.25rem 0 0.625rem 1.25rem;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   text-align: left;
 }
 
@@ -282,6 +281,7 @@ html, body {
   height: 9.4rem;
   object-fit: cover;
   border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow: 2px 4px 10px #b5b5b5;
 }
 .container__result__card img:hover {
   opacity: 0.6;
@@ -289,7 +289,8 @@ html, body {
 .container__result__card h4 {
   background-color: #99E2D0;
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
-  color: #03a880;
+  color: #2B9D80;
+  color: #2d9e82;
   position: absolute;
   right: 1.25rem;
   padding: 0.31rem 0.62rem;
@@ -301,6 +302,7 @@ html, body {
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
   background-color: #fff;
   border-radius: 0 0 1.25rem 1.25rem;
+  box-shadow: 2px 4px 10px #b5b5b5;
 }
 .container__result__card figcaption h3 {
   margin: 0.62rem 0.62rem 0 0.62rem;
@@ -308,11 +310,11 @@ html, body {
 }
 .container__result__card figcaption p {
   margin: 0 0 0.62rem 0.62rem;
-  color: #646363;
+  color: #7E7E7E;
 }
 .container__result__card figcaption i {
   position: absolute;
-  color: #646363;
+  color: #7E7E7E;
   font-size: 1rem;
   left: 15.6rem;
   bottom: 2.3rem;
@@ -351,7 +353,7 @@ html, body {
 }
 .page figcaption .title__icon {
   position: absolute;
-  color: #646363;
+  color: #7E7E7E;
   font-size: 1rem;
   top: 1rem;
   right: 4rem;
@@ -371,8 +373,8 @@ html, body {
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
 }
 .container__page .block1 h2 {
-  color: #646363;
-  font-size: 1.1rem;
+  color: #8E8E8E;
+  font-size: 1.125rem;
   border-bottom: 0.25rem solid #99E2D0;
   padding-bottom: 0.313rem;
   width: 3rem;
@@ -426,12 +428,12 @@ html, body {
   border-radius: 1.25rem;
   border: none;
   background-image: linear-gradient(170deg, #FF79DA, 70%, #9356DC);
-  box-shadow: 2px 4px 10px #b5b5b5;
+  box-shadow: 2px 4px 10px #cccccc;
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
   color: #fff;
   padding: 12px;
   transform: scale(1);
-  transition: transform 400ms;
+  transition: transform 1000ms;
   margin-bottom: 2.5rem;
 }
 .container__page .block1__form button:hover {

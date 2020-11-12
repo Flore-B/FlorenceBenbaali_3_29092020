@@ -12,9 +12,9 @@
     margin: 0.625rem 0 2.5rem 0;
 }
 .search__form {
-    background-color: #E1DFDF;
+    background-color: $color_form;
     @include medium {
-        background-color: $color-white;
+        background-color: $color-light;
     }
     .search__place {
         position: relative;
@@ -28,7 +28,6 @@
         margin-right: auto;
     }
    &__search__input {
-       width: 100%;
        height: 3rem;
        background-color: transparent;
        border: none;
@@ -40,7 +39,7 @@
            padding-left: 1.4rem;
        }
     }
-       .input__icon {
+    .input__icon {
         @include icon;
         @include medium {
             font-size: 0.9rem;
@@ -48,63 +47,60 @@
         top: 1rem;
        }
    }
-    .search__heading {
-        height: 15.625rem;
-        font-family: $text-font;
-        text-align: center;
-        background-color: #eeeeee;
-        margin-bottom: 1.875rem;
-      
-        h1 {
-            font-family: $text-title-font;
-            font-weight: bold;
-            font-size: map-get($font-size, h1);
-            margin: 0 2.5rem;
-            padding-top: 2.5rem;
+.search__heading {
+    height: 220px;
+    font-family: $text-font;
+    line-height: 1.2em;
+    text-align: center;
+    background-color: $color-main-bg;
+    margin-bottom: 1.875rem;
+    h1 {
+        font-family: $text-title-font;
+        font-weight: bold;
+        font-size: map-get($font-size, h1);
+        margin: 0 2.5rem;
+        padding-top: 24px;
         }
-        p {
+        h4 {
             font-family: $text-font;   
+            font-weight: normal;
             color: $color-icon;
-            font-size: map-get($font-size, p);
-            padding-bottom: 1.25rem;
-            margin: 0.9rem;
+            font-size: map-get($font-size, h4);
         }
     }
 .search {
     button {
-    @include button;
-}
+        @include button;
+        }
     a {
         text-decoration: none;
-        color: $color-white;
-    }
+        color: $color-light;
+        }
     }
 .search__nav {
     h2 {
         @include title-h2;
         @include medium {
             padding-top: 1rem;
+        }
     }
-}
     ul {
         display: flex;
         flex-wrap: wrap;
-        list-style-type: none;
         justify-content: center;
         text-align: center;
         font-weight: bold;
-        font-size: 0.9rem;
         padding: 0;
-        margin: 0;
     }
     li {
         display: flex;
         position: relative;
-        width: 25rem;
+        width: 300px;
         margin: 0.625rem 1.25rem 0.625rem 1.25rem;
         padding-left: 0.5rem;
     }
     &__icon {
+        color: $color-icon;
         padding-right: 0.9rem;
         font-size: 0.9rem;
     }
@@ -118,7 +114,7 @@
         font-size: 0.75rem;
         width: 1.25rem;
         height: 1.25rem;
-        color: $color-white;
+        color: $color-light;
     }
     a {
         width: 80%;
@@ -126,27 +122,29 @@
         font-size: map-get($font-size, a);
         border-radius: 1.12rem;
         text-align: left;
-        background-color: #eeeeee; 
-        box-shadow: 2px 4px 10px #b5b5b5;
+        background-color: $color-main-bg; 
+        box-shadow: 2px 4px 10px $color-shadow;
         padding: 1.25rem;
         text-decoration: none;
-        color: $color-black; 
+        color: $color-dark; 
         padding-left: 2.2rem;
         transition: background-color, box-shadow 300ms;
         &:hover {
             background-color: $light-main-btn;
-            box-shadow:  2px 4px 10px #777777;
-            color: red;
+            box-shadow:  2px 4px 10px $color-shadow-hover;
+            i {
+            color: $color-primary
+            }
         }
         @include medium {
-            background-color: $color-white;
+            background-color: $color-light;
         }
     }
 }
 .container {
     height: 66.25rem;
     padding-top: 0.9rem;
-    background-color: #eeeeee;
+    background-color: $color-main-bg;
     h2 {
         @include title-h2;
         text-align: left;
@@ -158,7 +156,7 @@
    justify-content: center;
    a {
         text-decoration: none;
-        color: $color-black;
+        color: $color-dark;
    }
     &__card {
         position: relative;
@@ -167,20 +165,21 @@
         align-items: center;
         width: 20rem;
         margin: 0.62rem;
-        
     img {
         width: 18rem;
         height: 9.4rem;
         object-fit: cover;
         border-radius: 1.25rem 1.25rem 0 0;
+        box-shadow: 2px 4px 10px #b5b5b5;
         &:hover {
             opacity: 0.6;  
     }
-    }
+}
     h4 {
         background-color: $color-tertiary;
         font-family: $text-font;
-        color:#03a880;
+        color:#2B9D80;
+        color: $dark-font-square-btn;
         position: absolute;
         right: 1.25rem;
         padding: 0.31rem 0.62rem;
@@ -190,8 +189,9 @@
         width: 18rem;
         height: 4.4rem;
         font-family: $text-font;
-        background-color: $color-white;
+        background-color: $color-light;
         border-radius: 0 0 1.25rem 1.25rem;
+        box-shadow: 2px 4px 10px #b5b5b5;
         h3 {
             margin: 0.62rem 0.62rem 0 0.62rem;
             font-size: map-get($font-size, h3)
@@ -214,7 +214,6 @@
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    
     figure {
         margin: 0;
         height: 20rem;
@@ -249,70 +248,69 @@
             }
         }
     }
-    .container__page {
-        height: 100%;
-        background-color: #eeeeee;
-        padding-left: 0.625rem;
-        padding-right: 0.625rem;
-        .block1 {
-            font-family: $text-font;
-            
-            h2 {
-                color: $color-icon;
-                font-size: map-get($font-size, h2);
-                border-bottom: 0.25rem solid $color-tertiary;
-                padding-bottom: 0.313rem;
-                width: 3rem;
+.container__page {
+    height: 100%;
+    background-color: #eeeeee;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    .block1 {
+        font-family: $text-font; 
+        h2 {
+            $color-font-h3: #8E8E8E;
+            color: $color-font-h3;
+            font-size: map-get($font-size, h2);
+            border-bottom: 0.25rem solid $color-tertiary;
+            padding-bottom: 0.313rem;
+            width: 3rem;
             }
-            ul {
-                padding: 0;
-                margin-bottom: 1.75rem;
-                
+        ul {
+            padding: 0;
+            margin-bottom: 1.75rem; 
             }
-            li {
-                display: flex;
-                position: relative;
-                list-style-type: none;
-                border-radius: 1.125rem;
-                background-color: $color-white;
-                box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
-                padding-bottom: 0.625rem;
-                margin-bottom: 0.875rem; 
-                transition: box-shadow 300ms;
-                &:hover {
-                    box-shadow: 2px 4px 10px #777777;
+        li {
+            display: flex;
+            position: relative;
+            list-style-type: none;
+            border-radius: 1.125rem;
+            background-color: $color-light;
+            box-shadow: 0.125rem 0.25rem 0.625rem #E1DFDF;
+            padding-bottom: 0.625rem;
+            margin-bottom: 0.875rem; 
+            transition: box-shadow 300ms;
+            &:hover {
+                box-shadow: 2px 4px 10px #777777;
                 }
-                h3 {
-                    padding: 0.625rem 0 0 0.625rem;
-                    margin: 0;
-                    font-size: map-get($font-size, h3)
+            h3 {
+                padding: 0.625rem 0 0 0.625rem;
+                margin: 0;
+                font-size: map-get($font-size, h3)
                 }
-                p {
-                    text-overflow: ellipsis;
-                    padding: 0 2.5rem 0 0.625rem;
-                    margin: 0;
-                    font-size: 0.8rem;
+            p {
+                text-overflow: ellipsis;
+                padding: 0 2.5rem 0 0.625rem;
+                margin: 0;
+                font-size: 0.8rem;
                 }
-                a {
-                    width: 96%;
-                    text-decoration: none;
-                    color: $color-black;
+            a {
+                width: 96%;
+                text-decoration: none;
+                color: $color-dark;
                  }
-                }
-            &__number {
-                position: absolute;
-                right: 1rem;
-                top: 1.875rem;
-                font-size: 0.875rem;
-                font-weight: bold;
+            }
+        &__number {
+            position: absolute;
+            right: 1rem;
+            top: 1.875rem;
+            font-size: 0.875rem;
+            font-weight: bold;
             }   
-            &__form {
-                text-align: center;
-                button {
+        &__form {
+            text-align: center;
+            button {
                 @include button;
                 margin-bottom: 2.5rem;
                 }
             }
-            }
+        }
  }
     

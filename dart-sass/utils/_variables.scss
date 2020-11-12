@@ -5,12 +5,18 @@ $text-title-font: 'robotoblack', Arial, Helvetica, sans-serif;
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-btn-end: #9356dc;
-$color-white: #fff;
-$color-black: #000;
-$color-icon: #646363;
-$light-main-btn: lighten($color-primary, 34%);
+$color-light: #fff;
+$color-dark: #000;
+$color-font-h3: #8E8E8E;
+$color-icon: #7E7E7E;
+$color-form: #EAEAEA;
+$color-shadow: #cccccc;
+$color-shadow-hover: #777777;
+$color-main-bg: #f6f6f6;
 
-$font-size: (h1: 1.25rem, h2: 1.1rem, h3: 1rem, h4: 0.9rem, p: 1rem, a: 0.875rem);
+$light-main-btn: lighten($color-primary, 34%);
+$dark-font-square-btn: darken($color-tertiary, 34.5%);
+
+$font-size: (h1: 1.25rem, h2: 1.125rem, h3: 1rem, h4: 0.9rem, p: 1rem, a: 0.875rem);
 $breakpoints: (medium: 680px, large: 1360px);
 
