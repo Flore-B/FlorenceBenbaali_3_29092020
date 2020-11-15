@@ -1,0 +1,47 @@
+@keyframes btn-appear{
+    from {
+        transform: scaleX(0);
+    }
+    to {
+       transform: scaleX(1);     }
+}
+@keyframes check{
+    0% {
+        transform: rotate(90deg);
+    }
+    
+    50%{
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes heart {
+   0%{
+       opacity: 0;
+   }
+   20%{
+       opacity: 0.2;
+   }
+   40%{
+       opacity: 0.4;
+   }
+   60%{
+       opacity: 0.6;
+   }
+   80%{
+       opacity: 0.8;
+   }
+   100%{
+       opacity: 1;
+   }
+}
+@keyframes card {
+    from {
+        transform: translateX(-9999px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
