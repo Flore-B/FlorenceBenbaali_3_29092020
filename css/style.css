@@ -493,7 +493,7 @@ html, body {
   text-decoration: none;
   color: #000;
 }
-.container__page .block1 li a:hover .box, .container__page .block1 li a:hover .block1__number, .container__page .block2 li a:hover .box, .container__page .block2 li a:hover .block1__number, .container__page .block3 li a:hover .box, .container__page .block3 li a:hover .block1__number {
+.container__page .block1 li a:hover .box, .container__page .block1 li a:hover .block__number, .container__page .block2 li a:hover .box, .container__page .block2 li a:hover .block__number, .container__page .block3 li a:hover .box, .container__page .block3 li a:hover .block__number {
   display: inline-block;
   transform-origin: right;
   animation: btn-appear 200ms;
@@ -501,7 +501,7 @@ html, body {
 .container__page .block1 li a:hover .btn, .container__page .block2 li a:hover .btn, .container__page .block3 li a:hover .btn {
   animation: check 200ms;
 }
-.container__page .block1 li a:hover .block1__number, .container__page .block2 li a:hover .block1__number, .container__page .block3 li a:hover .block1__number {
+.container__page .block1 li a:hover .block__number, .container__page .block2 li a:hover .block__number, .container__page .block3 li a:hover .block__number {
   justify-content: start;
 }
 .container__page .block1 li a:hover p, .container__page .block2 li a:hover p, .container__page .block3 li a:hover p {
@@ -538,14 +538,13 @@ html, body {
   }
 }
 .container__page .block1 li .btn-check, .container__page .block2 li .btn-check, .container__page .block3 li .btn-check {
-  position: absolute;
   margin-top: 50%;
   margin-left: 30%;
   background-color: #fff;
   color: #99E2D0;
   border-radius: 50%;
 }
-.container__page .block1__number, .container__page .block2__number, .container__page .block3__number {
+.container__page .block1 .block__number, .container__page .block2 .block__number, .container__page .block3 .block__number {
   grid-column-start: 2;
   grid-row-start: 3;
   display: flex;
@@ -553,10 +552,10 @@ html, body {
   font-size: 0.77rem;
   font-weight: bold;
 }
-.container__page .block1__form, .container__page .block2__form, .container__page .block3__form {
+.container__page .block1 .block__form, .container__page .block2 .block__form, .container__page .block3 .block__form {
   text-align: center;
 }
-.container__page .block1__form button, .container__page .block2__form button, .container__page .block3__form button {
+.container__page .block1 .block__form button, .container__page .block2 .block__form button, .container__page .block3 .block__form button {
   width: 200px;
   border-radius: 1.25rem;
   border: none;
@@ -569,13 +568,13 @@ html, body {
   transition: transform 1000ms;
   margin-bottom: 2.5rem;
 }
-.container__page .block1__form button:hover, .container__page .block2__form button:hover, .container__page .block3__form button:hover {
+.container__page .block1 .block__form button:hover, .container__page .block2 .block__form button:hover, .container__page .block3 .block__form button:hover {
   transform: scale(1.2);
   box-shadow: 2px 4px 10px #777777;
 }
 
 .block1 {
-  animation: card 0ms 5000ms both;
+  animation: card 0ms 500ms both;
 }
 
 .block2 {

@@ -334,7 +334,7 @@
                 text-decoration: none;
                 color: $color-dark;
                 &:hover {
-                    & .box, .block1__number{
+                    & .box, .block__number{
                     display: inline-block;
                     transform-origin: right;
                     animation: btn-appear 200ms;
@@ -342,7 +342,7 @@
                     & .btn{
                         animation: check 200ms;
                     }
-                    & .block1__number{
+                    & .block__number{
                         justify-content: start;
                     }
                     & p{
@@ -378,9 +378,7 @@
                     width: 10%;
                 }
                 }
-            
             .btn-check {
-                position: absolute;
                 margin-top: 50%;
                 margin-left: 30%;
                 background-color: $color-light;
@@ -388,7 +386,7 @@
                 border-radius: 50%;
             }
     } 
-        &__number {
+        .block__number {
             grid-column-start: 2;
             grid-row-start: 3;
             display: flex;
@@ -396,7 +394,7 @@
             font-size: 0.77rem;
             font-weight: bold;
             }   
-        &__form {
+        .block__form {
             text-align: center;
             button {
                 @include button;
@@ -407,7 +405,7 @@
         }
     }
 .block1 {
-    animation: card  0ms 5000ms both;
+    animation: card  0ms 500ms both;
 }
 .block2 {
     animation: card 0ms 1500ms both;
