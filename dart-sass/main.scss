@@ -280,10 +280,16 @@
   }
 .container__page {
     height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background-color: #eeeeee;
     padding: 1rem 0.625rem 0 0.625rem;
     .block1, .block2, .block3 {
-        font-family: $text-font; 
+        font-family: $text-font;
+        @include medium {
+        flex-wrap: nowrap;
+    }
         h2 {
             $color-font-h3: #8E8E8E;
             color: $color-font-h3;
@@ -306,9 +312,6 @@
             padding-bottom: 0.625rem;
             margin-bottom: 0.875rem; 
             transition: box-shadow 300ms;
-            @include medium{
-                width: 28%;
-            }
             &:hover {
                 box-shadow: 2px 4px 10px $color-shadow-hover;
             }
@@ -339,8 +342,8 @@
                     transform-origin: right;
                     animation: btn-appear 200ms;
                     }
-                    & .btn{
-                        animation: check 200ms;
+                    & .btn-check {
+                        animation: check 500ms;
                     }
                     & .block__number{
                         justify-content: start;
@@ -394,22 +397,26 @@
             font-size: 0.77rem;
             font-weight: bold;
             }   
+       
+            }
+        }
+.order {
+    background-color: #eeeeee;
         .block__form {
             text-align: center;
             button {
                 @include button;
                 margin-bottom: 2.5rem;
-                
+            }
                 }
             }
-        }
-    }
+    
 .block1 {
     animation: card  0ms 500ms both;
 }
 .block2 {
-    animation: card 0ms 1500ms both;
+    animation: card 0ms 1000ms both;
 }
 .block3 {
-    animation: card 0ms 2500ms both;
+    animation: card 0ms 1500ms both;
 }

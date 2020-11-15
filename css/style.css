@@ -92,10 +92,16 @@ html, body {
 }
 @keyframes check {
   0% {
+    transform: rotate(0deg);
+  }
+  25% {
     transform: rotate(90deg);
   }
   50% {
     transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
   }
   100% {
     transform: rotate(360deg);
@@ -435,11 +441,19 @@ html, body {
 
 .container__page {
   height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   background-color: #eeeeee;
   padding: 1rem 0.625rem 0 0.625rem;
 }
 .container__page .block1, .container__page .block2, .container__page .block3 {
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
+}
+@media screen and (min-width: 680px) {
+  .container__page .block1, .container__page .block2, .container__page .block3 {
+    flex-wrap: nowrap;
+  }
 }
 .container__page .block1 h2, .container__page .block2 h2, .container__page .block3 h2 {
   color: #8E8E8E;
@@ -462,11 +476,6 @@ html, body {
   padding-bottom: 0.625rem;
   margin-bottom: 0.875rem;
   transition: box-shadow 300ms;
-}
-@media screen and (min-width: 680px) {
-  .container__page .block1 li, .container__page .block2 li, .container__page .block3 li {
-    width: 28%;
-  }
 }
 .container__page .block1 li:hover, .container__page .block2 li:hover, .container__page .block3 li:hover {
   box-shadow: 2px 4px 10px #777777;
@@ -498,8 +507,8 @@ html, body {
   transform-origin: right;
   animation: btn-appear 200ms;
 }
-.container__page .block1 li a:hover .btn, .container__page .block2 li a:hover .btn, .container__page .block3 li a:hover .btn {
-  animation: check 200ms;
+.container__page .block1 li a:hover .btn-check, .container__page .block2 li a:hover .btn-check, .container__page .block3 li a:hover .btn-check {
+  animation: check 500ms;
 }
 .container__page .block1 li a:hover .block__number, .container__page .block2 li a:hover .block__number, .container__page .block3 li a:hover .block__number {
   justify-content: start;
@@ -552,10 +561,14 @@ html, body {
   font-size: 0.77rem;
   font-weight: bold;
 }
-.container__page .block1 .block__form, .container__page .block2 .block__form, .container__page .block3 .block__form {
+
+.order {
+  background-color: #eeeeee;
+}
+.order .block__form {
   text-align: center;
 }
-.container__page .block1 .block__form button, .container__page .block2 .block__form button, .container__page .block3 .block__form button {
+.order .block__form button {
   width: 200px;
   border-radius: 1.25rem;
   border: none;
@@ -568,7 +581,7 @@ html, body {
   transition: transform 1000ms;
   margin-bottom: 2.5rem;
 }
-.container__page .block1 .block__form button:hover, .container__page .block2 .block__form button:hover, .container__page .block3 .block__form button:hover {
+.order .block__form button:hover {
   transform: scale(1.2);
   box-shadow: 2px 4px 10px #777777;
 }
@@ -578,11 +591,11 @@ html, body {
 }
 
 .block2 {
-  animation: card 0ms 1500ms both;
+  animation: card 0ms 1000ms both;
 }
 
 .block3 {
-  animation: card 0ms 2500ms both;
+  animation: card 0ms 1500ms both;
 }
 
 /*# sourceMappingURL=style.css.map */
