@@ -1,5 +1,6 @@
 @keyframes btn-appear{
     from {
+        opacity: 1;
         transform: scaleX(0);
     }
     to {
@@ -22,26 +23,6 @@
         transform: rotate(360deg);
     }
 }
-@keyframes heart {
-   0%{
-       opacity: 0;
-   }
-   20%{
-       opacity: 0.2;
-   }
-   40%{
-       opacity: 0.4;
-   }
-   60%{
-       opacity: 0.6;
-   }
-   80%{
-       opacity: 0.8;
-   }
-   100%{
-       opacity: 1;
-   }
-}
 @keyframes card {
     from {
         transform: translateX(-9999px);
@@ -50,3 +31,23 @@
         transform: translateX(0);
     }
 }
+@keyframes lol {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    33% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    66% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+  }
+
+  
