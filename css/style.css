@@ -89,6 +89,14 @@ html, body {
   margin: 0;
 }
 
+*:hover {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: "shrikhandregular";
   src: url("../fonts/shrikhand-regular-webfont.eot");
