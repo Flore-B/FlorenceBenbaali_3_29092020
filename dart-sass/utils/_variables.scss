@@ -14,6 +14,9 @@ $color-shadow: #cccccc;
 $color-shadow-hover: #777777;
 $color-main-bg: #f6f6f6;
 
+$shadow-dark: 2px 4px 10px $color-shadow-hover;
+$shadow-light: 2px 4px 10px $color-shadow;
+
 $light-main-btn: lighten($color-primary, 34%);
 $dark-font-square-btn: darken($color-tertiary, 34.5%);
 

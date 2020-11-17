@@ -1,3 +1,4 @@
+/* En-tête avec logo */
 header {
     position: relative;
     i { 
@@ -19,3 +20,55 @@ header img {
         width: 20%;
     }
 }
+/* En-tête pages restaurants */
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    figure {
+        margin: 0;
+        height: 19rem;
+}
+    img {
+        width: 100%;
+        height: 17.5rem;
+        object-fit: cover;
+        margin-top: 0.6rem;
+        }
+    figcaption {
+        @include legend;
+        grid-template-rows: 30px 40px;
+        width: 100%;
+        height: 5rem;
+        position: relative;
+        bottom: 2.5rem;
+        background-color: #eeeeee;
+        border-radius: 1.25rem 1.25rem 0 0;
+        &:hover {
+            cursor: pointer;
+                & .btn-full {
+                    opacity: 1;
+                    transition: opacity 2000ms;
+                }
+        }
+    }
+    h1 {
+        font-family: $logo-font;
+        padding: 1.75rem 0.625rem 0 0.625rem;
+        font-size: map-get($font-size, h1);
+        @include medium {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        @include large {
+            margin: 0 auto 40px auto;
+            font-size: 30px;
+            }
+            }
+    .btn-empty {
+        @include btn-empty;
+        }
+    .btn-full {
+        @include btn-full;   
+           }
+    }

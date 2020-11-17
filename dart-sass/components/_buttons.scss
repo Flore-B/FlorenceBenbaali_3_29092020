@@ -1,0 +1,19 @@
+/*bouton "explorer" menu accueil */
+.search {
+    button {
+        @include main-btn;
+        }
+    }
+/*bouton "commander page restaurant */
+.order {
+    background-color: #eeeeee;
+        .block__form {
+            text-align: center;
+                button {
+                    @include main-btn;
+                    cursor: pointer;
+                    margin-bottom: 2.5rem;
+             
+                }
+            }
+        }

@@ -4,6 +4,10 @@
     margin: 0 0 0.625rem 1.25rem; 
     font-size: map-get($font-size, h2)
 }
+@mixin h4 {
+    font-family: $text-font;
+    font-size: map-get($font-size, h4);
+}
 @mixin icon {
     position: absolute;
     color: $color-icon;
@@ -19,7 +23,29 @@
         @content;
     }
 }
-@mixin button {
+@mixin legend {
+    display: grid;
+    grid-template-columns: 1fr 40px 15px;
+    font-family: $text-font;
+}
+@mixin btn-empty {
+        grid-column-start: 2;
+        grid-row-start:2;
+        align-self: flex-end;
+        justify-content: center;
+        font-size: 1.3rem;
+        color: $color-icon;
+}
+@mixin btn-full {
+        grid-column-start: 2;
+        grid-row-start:2;
+        align-self: flex-end;
+        justify-content: center;
+        font-size: 1.3rem;
+        color: $color-primary;
+        opacity: 0;
+}
+@mixin btn {
     width: 200px;
     border-radius: 1.25rem;
     border: none;
@@ -33,4 +59,14 @@
         transform: scale(1.2);
         box-shadow: 2px 4px 10px #777777;
     }
+}
+@mixin main-btn {
+    @include btn;
+        @include medium {
+            font-size: 1.1rem;
+            width: 250px;
+        }
+        @include large {
+            width: 300px;
+        }
 }
