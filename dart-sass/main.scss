@@ -9,25 +9,24 @@
 @import "./base/animations.scss";
 
 .search {
-    margin: 0.625rem 0 2.5rem 0;
+    padding: 0.625rem 0 2.5rem 0;
+    @include large {
+        padding-bottom: 4 rem;
+        background-color: $color-light;
+
+    }
 }
 .search__form {
     background-color: $color_form;
     box-shadow: inset 0 4px 4px -4px $color-shadow;
-    @include medium {
-        background-color: $color-light;
-    }
+   
     .search__place {
         position: relative;
         width: 10.5rem;
         margin-left: auto;
         margin-right: auto;
     }
-    @include medium {
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  
    &__search__input {
        height: 3rem;
        background-color: transparent;
@@ -37,14 +36,12 @@
        font-size: 0.938rem;
        @include medium {
            font-size: 1.1rem;
-           padding-left: 1.4rem;
+           text-align: left;
+           padding-left: 20px;
        }
     }
     .input__icon {
         @include icon;
-        @include medium {
-            font-size: 0.9rem;
-        }
         top: 1rem;
        }
    }
@@ -54,24 +51,40 @@
     line-height: 1.2em;
     text-align: center;
     background-color: $color-main-bg;
-    margin-bottom: 1.875rem;
+    @include large {
+        padding-bottom: 30px;
+    }
     h1 {
         font-family: $text-title-font;
         font-weight: bold;
         font-size: map-get($font-size, h1);
         margin: 0 2.5rem;
         padding-top: 24px;
+        @include medium {
+            font-size: 1.6rem;
+        }
         }
         h4 {
             font-family: $text-font;   
             font-weight: normal;
             color: $color-icon;
             font-size: map-get($font-size, h4);
+            @include medium {
+                font-size: 1.1rem;
+            }
+           
         }
     }
 .search {
     button {
         @include button;
+        @include medium {
+            font-size: 1.1rem;
+            width: 250px;
+        }
+        @include large {
+            width: 340px;
+        }
         }
     a {
         text-decoration: none;
@@ -79,10 +92,16 @@
         }
     }
 .search__nav {
+    @include large {
+        background-color: $color-light;
+    }
     h2 {
         @include title-h2;
         @include medium {
             padding-top: 1rem;
+        }
+        @include large {
+            font-size: 2rem;
         }
     }
     ul {
@@ -99,11 +118,19 @@
         width: 300px;
         margin: 0.625rem 1.25rem 0.625rem 1.25rem;
         padding-left: 0.5rem;
+        @include large {
+            width: 30%;
+            margin: 0;
+        }
+        
     }
     &__icon {
         color: $color-icon;
         padding-right: 0.9rem;
         font-size: 0.9rem;
+        @include large {
+            font-size: 1.1rem;
+        }
     }
     &__number {
         position: absolute;
@@ -116,6 +143,11 @@
         width: 1.25rem;
         height: 1.25rem;
         color: $color-light;
+        @include large {
+            font-size: 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
     a {
         width: 80%;
@@ -137,18 +169,24 @@
             color: $color-primary
             }
         }
-        @include medium {
-            background-color: $color-light;
+       
+        @include large {
+            font-size: 1.2rem;
         }
     }
 }
 .container {
-    height: 66.25rem;
     padding-top: 0.9rem;
+    padding-bottom: 2.7rem;
     background-color: $color-main-bg;
+    @include large {
+        background-color: $color-light    }
     h2 {
         @include title-h2;
         text-align: left;
+        @include large {
+            font-size: 2rem;
+        }
     }
 }
 .container__result {
@@ -172,12 +210,22 @@
         align-items: center;
         width: 20rem;
         margin: 0.62rem;
+        @include large {
+            width:28rem;
+            margin: 3rem;
+        }
+       
     img {
         width: 18rem;
         height: 9.4rem;
         object-fit: cover;
         border-radius: 1.25rem 1.25rem 0 0;
         box-shadow: 2px 4px 10px #b5b5b5;
+        @include large {
+            width: 28rem;
+            height: 14rem;
+            margin-right: 1rem;
+        }
 }
     h4 {
         background-color: $color-tertiary;
@@ -188,6 +236,9 @@
         right: 1.25rem;
         padding: 0.31rem 0.62rem;
         font-size: map-get($font-size, h4);
+        @include large {
+            font-size: 1.2rem;
+        }
     }
     figcaption {
         display: grid;
@@ -199,17 +250,33 @@
         background-color: $color-light;
         border-radius: 0 0 1.25rem 1.25rem;
         box-shadow: 2px 4px 10px #b5b5b5;
+        &:hover {
+            box-shadow:  2px 4px 10px $color-shadow-hover;
+
+        }
+        @include large {
+            width: 28rem;
+            margin-right: 1rem;
+            background-color: $color-main-bg;
+
+        }
         h3 {
             grid-column-start: 1;
             grid-row-start:2;
             margin: 0.62rem 0.62rem 0 0.62rem;
-            font-size: map-get($font-size, h3)
+            font-size: map-get($font-size, h3);
+            @include large {
+                font-size: 1.2rem;
+            }
         }
         p {
             grid-column-start: 1;
             grid-row-start:3;
             margin: 0 0 0.62rem 0.62rem;
-            color: $color-icon; 
+            color: $color-icon;
+            @include large {
+                font-size: 1.2rem;
+            }
         }
         .btn-empty {
             grid-column-start: 2;
@@ -257,10 +324,22 @@
         font-family: $text-font;
         background-color: #eeeeee;
         border-radius: 1.25rem 1.25rem 0 0;
+        &:hover {
+            cursor: pointer;
+                & .btn-full {
+                    opacity: 1;
+                    transition: opacity 2000ms;
+                }
+        }
+    }
     h1 {
         font-family: $logo-font;
         padding: 1.75rem 0.625rem 0 0.625rem;
         font-size: map-get($font-size, h1);
+        @include medium {
+            text-align: center;
+            font-size: 1.4rem;
+        }
         @include large {
             margin: 0 auto 40px auto;
             font-size: 30px;
@@ -278,14 +357,11 @@
         font-size: 1.3rem;
         color: $color-primary;
         opacity: 0;    
-        &:hover {
-            opacity: 1;
-            transition: opacity 2000ms;
-        }
+        
      
            }
     }
-  }
+  
 .container__page {
     height: 100%;
     display: flex;
@@ -305,6 +381,7 @@
             border-bottom: 0.25rem solid $color-tertiary;
             padding-bottom: 0.313rem;
             width: 3rem;
+           
             }
         ul {
             padding: 0;
@@ -320,12 +397,19 @@
             padding-bottom: 0.625rem;
             margin-bottom: 0.875rem; 
             transition: box-shadow 300ms;
+            &:hover {
+                box-shadow:  2px 4px 10px $color-shadow-hover;
+            }
+           
             h4 {
                 grid-column: 1 / span 2;
                 grid-row: 1 / span 2;
                 padding: 0.625rem 0 0 0.625rem;
                 margin: 0;
-                font-size: map-get($font-size, h4)
+                font-size: map-get($font-size, h4);
+                @include large {
+                    font-size: 1rem;
+                }
                 }
             p {
                 grid-column-start: 1;
@@ -333,16 +417,21 @@
                 padding: 0 0 0 0.625rem;
                 margin: 0;
                 font-size: 0.77rem;
+                @include large {
+                    font-size: 0.9rem;
                 }
+            }
             a {
                 display: grid;
                 grid-template-columns: 230px 56px 15px;
                 grid-template-rows: auto;
-                width: 100%;
                 text-decoration: none;
                 color: $color-dark;
-                @include large {
+                @include medium {
                     grid-template-columns: 300px 56px 15px;
+                }
+                @include large {
+                    grid-template-columns: 360px 65px 25px;
                 }
                 &:hover {
                     & .box, .block__number{
@@ -360,11 +449,18 @@
                         transform-origin: none;
                     }
                     & .ellipse{
-                        display: inline-block;
+                        display: inline-block; 
+                        @include large {
+                            display: none;
+                        }
                     }
                     & .text{
                         display: none;
+                        @include large {
+                            display: inline-block;
+                        }
                     }
+                    
                   
             }
             }
@@ -398,20 +494,32 @@
             justify-content: center;
             font-size: 0.77rem;
             font-weight: bold;
+            @include large {
+                font-size: 0.9rem;
+            }
             }   
        
             }
         }
 .order {
     background-color: #eeeeee;
+   
         .block__form {
             text-align: center;
             button {
+                cursor: pointer;
+               
                 @include button;
                 margin-bottom: 2.5rem;
+                @include medium {
+                    font-size: 1.1rem;
+                    width: 250px;
+                }
                 @include large {
-                    width: 365px;
-                    }
+                    font-size: 1.6rem;
+                    width: 340px;
+                }
+               
             }
             }
         }
