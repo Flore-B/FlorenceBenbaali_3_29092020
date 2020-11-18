@@ -31,16 +31,14 @@
 @mixin btn-empty {
         grid-column-start: 2;
         grid-row-start:2;
-        align-self: flex-end;
-        justify-content: center;
+        align-self: center;
         font-size: 1.3rem;
         color: $color-icon;
 }
 @mixin btn-full {
         grid-column-start: 2;
         grid-row-start:2;
-        align-self: flex-end;
-        justify-content: center;
+        align-self: center;
         font-size: 1.3rem;
         color: $color-primary;
         opacity: 0;

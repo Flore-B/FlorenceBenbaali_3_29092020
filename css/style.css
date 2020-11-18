@@ -175,16 +175,14 @@ header img {
 .page .btn-empty {
   grid-column-start: 2;
   grid-row-start: 2;
-  align-self: flex-end;
-  justify-content: center;
+  align-self: center;
   font-size: 1.3rem;
   color: #7E7E7E;
 }
 .page .btn-full {
   grid-column-start: 2;
   grid-row-start: 2;
-  align-self: flex-end;
-  justify-content: center;
+  align-self: center;
   font-size: 1.3rem;
   color: #9356DC;
   opacity: 0;
@@ -513,6 +511,14 @@ html, body {
     transform: translateX(0);
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*bouton "explorer" menu accueil */
 .search button {
   width: 200px;
@@ -577,6 +583,26 @@ html, body {
   }
 }
 
+/* .loader {
+    height: 100%;
+    line-height: 100%;
+    background-color: $color-light;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+.spinner {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border-radius: 60px;
+    border: 6px solid $color-tertiary;
+    border-top-color: $color-primary;
+    border-bottom-color: $color-secondary;
+    animation: spin 1500ms linear infinite;
+}
+}
+*/
 .search {
   padding: 0.625rem 0 2.5rem 0;
 }
@@ -752,16 +778,14 @@ a {
 .container__result__card figcaption .btn-empty {
   grid-column-start: 2;
   grid-row-start: 2;
-  align-self: flex-end;
-  justify-content: center;
+  align-self: center;
   font-size: 1.3rem;
   color: #7E7E7E;
 }
 .container__result__card figcaption .btn-full {
   grid-column-start: 2;
   grid-row-start: 2;
-  align-self: flex-end;
-  justify-content: center;
+  align-self: center;
   font-size: 1.3rem;
   color: #9356DC;
   opacity: 0;
