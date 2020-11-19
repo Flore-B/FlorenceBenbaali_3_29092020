@@ -5,6 +5,7 @@
     }
     h2 {
         @include title-h2;
+        margin-top: 2rem;
         @include medium {
             padding-top: 1rem;
         }
@@ -108,7 +109,7 @@
             }
         li {
             position: relative;
-            height: auto;
+            height: 45px;
             list-style-type: none;
             border-radius: 1.125rem;
             background-color: $color-light;
@@ -121,8 +122,8 @@
             }
            
             h4 {
-                grid-column: 1 / span 2;
-                grid-row: 1 / span 2;
+                grid-column: 1 / span 3;
+                grid-row: 1;
                 padding: 0.625rem 0 0 0.625rem;
                 margin: 0;
                 @include h4;
@@ -131,7 +132,7 @@
                 }
                 }
             p {
-                grid-column-start: 1;
+                grid-column: 1 / span 3;
                 grid-row-start: 3;
                 padding: 0 0 0 0.625rem;
                 margin: 0;
@@ -142,7 +143,7 @@
             }
             a {
                 display: grid;
-                grid-template-columns: 230px 56px 15px;
+                grid-template-columns: 210px 20px 56px 15px;
                 grid-template-rows: auto;
                 text-decoration: none;
                 color: $color-dark;
@@ -154,7 +155,9 @@
                 }
                 &:hover {
                     & .box, .block__number{
-                    display: inline-block;
+                    display: flex; 
+                    justify-content: center;
+                    align-items: center;
                     transform-origin: right;
                     animation: btn-appear 500ms;
                     }
@@ -164,8 +167,13 @@
                     & .block__number{
                         justify-content: start;
                     }
-                    & p{
+                    & p, h4 {
+                        grid-column: 1;
                         transform-origin: none;
+                        white-space: nowrap;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                     & .ellipse{
                         display: inline-block; 
@@ -173,17 +181,10 @@
                             display: none;
                         }
                     }
-                    & .text{
-                        display: none;
-                        @include large {
-                            display: inline-block;
-                        }
-                    }
+                   
             }
             }
-            .ellipse{
-                display: none;
-            }
+           
             .box {
                 position: absolute;
                 display: none;
@@ -197,15 +198,13 @@
                 }
                 }
             .check {
-                margin-top: 50%;
-                margin-left: 30%;
                 background-color: $color-tertiary;
                 color: $color-light;
                 border-radius: 50%;
             }
     } 
         .block__number {
-            grid-column-start: 2;
+            grid-column-start: 3;
             grid-row-start: 3;
             display: flex;
             justify-content: center;

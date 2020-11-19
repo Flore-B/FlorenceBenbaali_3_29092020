@@ -3,10 +3,10 @@ footer {
     flex-direction: column;
     background-color: $color-dark;
     color: $color-light;
+    animation: $anim-home-hidden;
     @include medium {
         align-items: center;
     }
-    
     img {
         font-family: $logo-font;
         width: 120px;

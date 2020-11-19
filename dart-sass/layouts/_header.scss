@@ -16,6 +16,7 @@ header img {
     margin-top: 0.625rem;
     width: 45%;
     margin-top: 1.25rem;
+    animation: $anim-home-hidden;
     @include medium {
         width: 20%;
     }
@@ -44,13 +45,7 @@ header img {
         bottom: 2.5rem;
         background-color: #eeeeee;
         border-radius: 1.25rem 1.25rem 0 0;
-        &:hover {
-            cursor: pointer;
-                & .btn-full {
-                    opacity: 1;
-                    transition: opacity 2000ms;
-                }
-        }
+        
     }
     h1 {
         font-family: $logo-font;
@@ -62,13 +57,18 @@ header img {
         }
         @include large {
             margin: 0 auto 40px auto;
-            font-size: 30px;
+            font-size: 1.875rem;
             }
             }
     .btn-empty {
         @include btn-empty;
         }
     .btn-full {
-        @include btn-full;   
+        @include btn-full;
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 2000ms;
+        }
            }
     }
