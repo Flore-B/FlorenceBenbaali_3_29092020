@@ -15,6 +15,11 @@
   </head>
 
   <body>
+    <div class="loader">
+      <span class="ball-1"></span>
+      <span class="ball-2"></span>
+      <span class="ball-3"></span>
+    </div>
     <header>
       <div>
         <a href="index.html"><i class="fas fa-arrow-left"></i></a
@@ -22,20 +27,19 @@
       </div>
     </header>
 
-    <header class="page">
-      <figure>
-        <img
-          src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-          alt="Ménilmontant"
-        />
-        <figcaption>
-          <h1>La palette du goût</h1>
-          <i class="btn-empty far fa-heart" aria-hidden="true"></i
-          ><i class="btn-full fas fa-heart"></i>
-        </figcaption>
-      </figure>
-    </header>
-    <section class="container__page">
+    
+    <section class="page__container">
+      <figure class="page__header">
+          <img
+            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="Ménilmontant"
+          />
+          <figcaption>
+            <h1>La palette du goût</h1>
+            <i class="btn-empty far fa-heart" aria-hidden="true"></i
+            ><i class="btn-full fas fa-heart"></i>
+          </figcaption>
+        </figure>
       <nav class="block1">
         <h2>ENTREES</h2>
         <ul>
@@ -65,9 +69,7 @@
                 <i class="check fas fa-check-circle"></i>
               </div>
               <h4>Oeuf au plat</h4>
-              <p>
-                Assaisonné à la truffe sur lit de caviar
-              </p>
+              <p>Assaisonné à la truffe sur lit de caviar</p>
               <span class="block__number">20€</span></a
             >
           </li>
@@ -92,9 +94,7 @@
                 <i class="check fas fa-check-circle"></i>
               </div>
               <h4>Parmentier de queue de boeuf</h4>
-              <p>
-                A la truffe noire sur sa purée de panais
-              </p>
+              <p>A la truffe noire sur sa purée de panais</p>
               <span class="block__number">35€</span></a
             >
           </li>
@@ -136,24 +136,21 @@
           <li>
             <a href="#"
               ><div class="box">
-               <i class="check fas fa-check-circle"></i>
+                <i class="check fas fa-check-circle"></i>
               </div>
               <h4>Mousse au chocolat</h4>
-              <p>
-                Au piment d'Espelette et à la truffe noire
-              </p>
+              <p>Au piment d'Espelette et à la truffe noire</p>
               <span class="block__number">23€</span></a
             >
           </li>
         </ul>
       </nav>
     </section>
-    <section class="order">
-      <form class="block__form" action="traitement.php" method="get">
-        <button type="submit">Commander</button>
-      </form>
-    </section>
-
+      <section class="order">
+        <form class="block__form" action="traitement.php" method="get">
+          <button type="submit">Commander</button>
+        </form>
+      </section>
     <footer>
       <div><img src="images/logo/ohmyfood-white.png" alt="logo" /></div>
       <nav class="footer__nav">

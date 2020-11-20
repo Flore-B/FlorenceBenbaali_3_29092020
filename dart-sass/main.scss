@@ -22,7 +22,7 @@
         background-color: $color-tertiary;
         border-radius: 10%;
         opacity: 0;
-        animation: ball 0.4s 100ms 9 cubic-bezier(1,-0.03,1,.38) alternate;
+        animation: ball 0.4s 100ms 7 cubic-bezier(1,-0.03,1,.38) alternate;
     }
     &-2 {
         height: 20px;
@@ -31,7 +31,7 @@
         background-color: $color-primary;
         border-radius: 10%;
         opacity: 0;
-        animation: ball 0.4s 300ms 9 cubic-bezier(1,-0.03,1,.38) alternate;
+        animation: ball 0.4s 300ms 7 cubic-bezier(1,-0.03,1,.38) alternate;
     }
     &-3 {
         height: 20px;
@@ -40,7 +40,7 @@
         background-color: $color-secondary;
         border-radius: 10%;
         opacity: 0;
-        animation: ball 0.4s 500ms 9 cubic-bezier(1,-0.03,1,.38) alternate;
+        animation: ball 0.4s 500ms 7 cubic-bezier(1,-0.03,1,.38) alternate;
     }
 }
 }

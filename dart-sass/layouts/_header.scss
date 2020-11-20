@@ -1,13 +1,18 @@
 /* En-tête avec logo */
 header {
     position: relative;
+    animation: $anim-home-hidden;
+
     i { 
     position: absolute;
     left: 1rem;
-    top: 0.5rem;
+    bottom: 0rem;
     color: $color-dark;
     font-size: 1rem;
-}
+    @include large {
+       
+    }
+    }
 }
 header img {
     display: block;
@@ -16,33 +21,30 @@ header img {
     margin-top: 0.625rem;
     width: 45%;
     margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
     animation: $anim-home-hidden;
     @include medium {
-        width: 20%;
+        width: 30%;
     }
 }
 /* En-tête pages restaurants */
-.page {
+.page__header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    figure {
-        margin: 0;
-        height: 19rem;
-}
+    margin: 0;
+    animation: $anim-home-hidden;
     img {
         width: 100%;
-        height: 17.5rem;
+        height: 13.5rem;
         object-fit: cover;
-        margin-top: 0.6rem;
         }
     figcaption {
         @include legend;
         grid-template-rows: 30px 40px;
         width: 100%;
-        height: 5rem;
         position: relative;
-        bottom: 2.5rem;
+        bottom: 1rem;
         background-color: #eeeeee;
         border-radius: 1.25rem 1.25rem 0 0;
         

@@ -20,9 +20,9 @@ $shadow-light: 2px 4px 10px $color-shadow;
 $light-main-btn: lighten($color-primary, 34%);
 $dark-font-square-btn: darken($color-tertiary, 34.5%);
 
-$anim-home-hidden: home-page 5s 0s linear forwards;
+$anim-home-hidden: home-page 3s 0s linear forwards;
 
 $font-size: (h1: 1.25rem, h2: 1.125rem, h3: 1rem, h4: 0.9rem, p: 1rem, a: 0.875rem);
 
-$breakpoints: (medium: 680px, large: 1360px);
+$breakpoints: (medium: 680px, large: 1450px);
 

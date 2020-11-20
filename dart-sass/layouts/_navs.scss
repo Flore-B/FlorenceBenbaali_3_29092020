@@ -83,18 +83,20 @@
     }
 }
 /* Menu de navigation pages restaurants */
-.container__page {
+.page__container {
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
-    background-color: #eeeeee;
-    padding: 1rem 0.625rem 0 0.625rem;
+    background-color: #eeeeee; 
+    animation: $anim-home-hidden;
+    @include large {
+        flex-direction: row
+    }
     .block1, .block2, .block3 {
         font-family: $text-font;
-        @include medium {
-        flex-wrap: nowrap;
-    }
         h2 {
             $color-font-h3: #8E8E8E;
             color: $color-font-h3;
@@ -110,6 +112,7 @@
         li {
             position: relative;
             height: 45px;
+            width: 301px;
             list-style-type: none;
             border-radius: 1.125rem;
             background-color: $color-light;
@@ -117,6 +120,14 @@
             padding-bottom: 0.625rem;
             margin-bottom: 0.875rem; 
             transition: box-shadow 300ms;
+            @include medium {
+                width: 500px;
+            }
+            @include large {
+                width: 461px;
+                padding-bottom: 1rem;
+                margin-bottom: 2rem; 
+            }
             &:hover {
                 box-shadow: $shadow-dark;
             }
@@ -148,10 +159,10 @@
                 text-decoration: none;
                 color: $color-dark;
                 @include medium {
-                    grid-template-columns: 300px 56px 15px;
+                    grid-template-columns: 400px 20px 65px 15px;
                 }
                 @include large {
-                    grid-template-columns: 360px 65px 25px;
+                    grid-template-columns: 360px 20px 65px 15px;
                 }
                 &:hover {
                     & .box, .block__number{

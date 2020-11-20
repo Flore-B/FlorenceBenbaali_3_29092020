@@ -15,15 +15,19 @@
   </head>
 
   <body>
+    <div class="loader">
+      <span class="ball-1"></span>
+      <span class="ball-2"></span>
+      <span class="ball-3"></span>
+    </div>
     <header>
       <div>
         <a href="index.html"><i class="fas fa-arrow-left"></i></a
         ><img src="images/logo/ohmyfood.png" alt="logo" />
       </div>
     </header>
-
-    <header class="page">
-      <figure>
+      <section class="page__container">
+      <figure class="page__header">
         <img
           src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
           alt="Cité-Rouge"
@@ -34,9 +38,6 @@
           ><i class="btn-full fas fa-heart"></i>
         </figcaption>
       </figure>
-    </header>
-
-    <section class="container__page">
       <nav class="block1">
         <h2>ENTREES</h2>
         <ul>
@@ -81,9 +82,7 @@
                 <i class="check fas fa-check-circle"></i>
               </div>
               <h4>Coquilles Saint-Jacques</h4>
-              <p>
-                Accompagnées d'une purée de panais
-              </p>
+              <p>Accompagnées d'une purée de panais</p>
               <span class="block__number">40€</span></a
             >
           </li>
@@ -93,9 +92,9 @@
                 <i class="check fas fa-check-circle"></i>
               </div>
               <h4>Magret de canard</h4>
-              <p>
-                Et parmentier de pommes de terre
-              <span class="block__number">35€</span></a
+              <p>Et parmentier de pommes de terre</p>
+                <span class="block__number">35€</span>
+              </a
             >
           </li>
           <li>
@@ -103,12 +102,8 @@
               ><div class="box">
                 <i class="check fas fa-check-circle"></i>
               </div>
-              <h4>
-                Pigeonneau d'Ille-et-Vilaine
-              </h4>
-              <p>
-                Sur son lit de gnocchis aux légumes
-              </p>
+              <h4>Pigeonneau d'Ille-et-Vilaine</h4>
+              <p>Sur son lit de gnocchis aux légumes</p>
               <span class="block__number">44€</span></a
             >
           </li>
@@ -155,7 +150,6 @@
         <button type="submit">Commander</button>
       </form>
     </section>
-
     <footer>
       <div><img src="images/logo/ohmyfood-white.png" alt="logo" /></div>
       <nav class="footer__nav">
