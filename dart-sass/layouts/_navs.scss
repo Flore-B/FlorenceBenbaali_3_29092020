@@ -93,7 +93,8 @@
     background-color: #eeeeee; 
     animation: $anim-home-hidden;
     @include large {
-        flex-direction: row
+        flex-direction: row;
+        align-items: flex-start;
     }
     .block1, .block2, .block3 {
         font-family: $text-font;

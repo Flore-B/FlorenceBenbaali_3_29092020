@@ -6,12 +6,9 @@ header {
     i { 
     position: absolute;
     left: 1rem;
-    bottom: 0rem;
+    bottom: 0.8rem;
     color: $color-dark;
     font-size: 1rem;
-    @include large {
-       
-    }
     }
 }
 header img {

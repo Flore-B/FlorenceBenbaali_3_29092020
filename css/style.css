@@ -37,7 +37,8 @@ footer {
   flex-direction: column;
   background-color: #000;
   color: #fff;
-  animation: home-page 3s 0s linear forwards;
+  -webkit-animation: home-page 3s 0s linear forwards;
+          animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 680px) {
   footer {
@@ -98,15 +99,17 @@ footer i {
 /* En-tête avec logo */
 header {
   position: relative;
-  animation: home-page 3s 0s linear forwards;
+  -webkit-animation: home-page 3s 0s linear forwards;
+          animation: home-page 3s 0s linear forwards;
 }
 header i {
   position: absolute;
   left: 1rem;
-  bottom: 0rem;
+  bottom: 0.8rem;
   color: #000;
   font-size: 1rem;
 }
+
 header img {
   display: block;
   margin-left: auto;
@@ -115,7 +118,8 @@ header img {
   width: 45%;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
-  animation: home-page 3s 0s linear forwards;
+  -webkit-animation: home-page 3s 0s linear forwards;
+          animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 680px) {
   header img {
@@ -129,12 +133,14 @@ header img {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  animation: home-page 3s 0s linear forwards;
+  -webkit-animation: home-page 3s 0s linear forwards;
+          animation: home-page 3s 0s linear forwards;
 }
 .page__header img {
   width: 100%;
   height: 13.5rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .page__header figcaption {
   display: grid;
@@ -294,11 +300,13 @@ header img {
   align-items: center;
   flex-wrap: wrap;
   background-color: #eeeeee;
-  animation: home-page 3s 0s linear forwards;
+  -webkit-animation: home-page 3s 0s linear forwards;
+          animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1450px) {
   .page__container {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 .page__container .block1, .page__container .block2, .page__container .block3 {
@@ -389,10 +397,12 @@ header img {
   justify-content: center;
   align-items: center;
   transform-origin: right;
-  animation: btn-appear 500ms;
+  -webkit-animation: btn-appear 500ms;
+          animation: btn-appear 500ms;
 }
 .page__container .block1 li a:hover .check, .page__container .block2 li a:hover .check, .page__container .block3 li a:hover .check {
-  animation: check 800ms;
+  -webkit-animation: check 800ms;
+          animation: check 800ms;
 }
 .page__container .block1 li a:hover .block__number, .page__container .block2 li a:hover .block__number, .page__container .block3 li a:hover .block__number {
   justify-content: start;
@@ -447,15 +457,18 @@ header img {
 }
 
 .block1 {
-  animation: card 0ms 500ms both;
+  -webkit-animation: card 0ms 500ms both;
+          animation: card 0ms 500ms both;
 }
 
 .block2 {
-  animation: card 0ms 1250ms both;
+  -webkit-animation: card 0ms 1250ms both;
+          animation: card 0ms 1250ms both;
 }
 
 .block3 {
-  animation: card 0ms 1750ms both;
+  -webkit-animation: card 0ms 1750ms both;
+          animation: card 0ms 1750ms both;
 }
 
 html, body {
@@ -493,6 +506,15 @@ html, body {
   font-weight: normal;
   font-style: normal;
 }
+@-webkit-keyframes btn-appear {
+  from {
+    opacity: 1;
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
 @keyframes btn-appear {
   from {
     opacity: 1;
@@ -502,12 +524,33 @@ html, body {
     transform: scaleX(1);
   }
 }
+@-webkit-keyframes check {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes check {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes home-page {
+  0% {
+    transform: translateX(-9999px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes home-page {
@@ -520,6 +563,16 @@ html, body {
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ball {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
     opacity: 1;
   }
 }
@@ -564,7 +617,8 @@ html, body {
 /*bouton "commander page restaurant */
 .order {
   background-color: #eeeeee;
-  animation: home-page 3s 0s linear forwards;
+  -webkit-animation: home-page 3s 0s linear forwards;
+          animation: home-page 3s 0s linear forwards;
 }
 .order .block__form {
   text-align: center;
@@ -610,7 +664,8 @@ html, body {
   background-color: #99E2D0;
   border-radius: 10%;
   opacity: 0;
-  animation: ball 0.4s 100ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+  -webkit-animation: ball 0.4s 100ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+          animation: ball 0.4s 100ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
 }
 .loader .ball-2 {
   height: 20px;
@@ -619,7 +674,8 @@ html, body {
   background-color: #9356DC;
   border-radius: 10%;
   opacity: 0;
-  animation: ball 0.4s 300ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+  -webkit-animation: ball 0.4s 300ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+          animation: ball 0.4s 300ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
 }
 .loader .ball-3 {
   height: 20px;
@@ -628,12 +684,14 @@ html, body {
   background-color: #FF79DA;
   border-radius: 10%;
   opacity: 0;
-  animation: ball 0.4s 500ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+  -webkit-animation: ball 0.4s 500ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+          animation: ball 0.4s 500ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
 }
 
 .search {
   padding: 0.625rem 0 2.5rem 0;
-  animation: home-page 3s 0s linear forwards;
+  -webkit-animation: home-page 3s 0s linear forwards;
+          animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1450px) {
   .search {
@@ -687,7 +745,8 @@ a {
   padding-top: 0.9rem;
   padding-bottom: 2.7rem;
   background-color: #f6f6f6;
-  animation: home-page 3s 0s linear forwards;
+  -webkit-animation: home-page 3s 0s linear forwards;
+          animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1450px) {
   .container {
@@ -734,7 +793,8 @@ a {
 .container__result__card img {
   width: 18rem;
   height: 9.4rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 1.25rem 1.25rem 0 0;
   box-shadow: 2px 4px 10px #cccccc;
 }
@@ -821,5 +881,3 @@ a {
   opacity: 1;
   transition: opacity 1500ms;
 }
-
-/*# sourceMappingURL=style.css.map */
