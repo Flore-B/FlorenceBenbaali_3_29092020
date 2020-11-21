@@ -37,8 +37,7 @@ footer {
   flex-direction: column;
   background-color: #000;
   color: #fff;
-  -webkit-animation: home-page 3s 0s linear forwards;
-          animation: home-page 3s 0s linear forwards;
+  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 680px) {
   footer {
@@ -99,8 +98,7 @@ footer i {
 /* En-tête avec logo */
 header {
   position: relative;
-  -webkit-animation: home-page 3s 0s linear forwards;
-          animation: home-page 3s 0s linear forwards;
+  animation: home-page 3s 0s linear forwards;
 }
 header i {
   position: absolute;
@@ -118,8 +116,7 @@ header img {
   width: 45%;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
-  -webkit-animation: home-page 3s 0s linear forwards;
-          animation: home-page 3s 0s linear forwards;
+  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 680px) {
   header img {
@@ -128,56 +125,53 @@ header img {
 }
 
 /* En-tête pages restaurants */
-.page__header {
+.page__header figure {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  -webkit-animation: home-page 3s 0s linear forwards;
-          animation: home-page 3s 0s linear forwards;
+  animation: home-page 3s 0s linear forwards;
 }
-.page__header img {
+.page__header figure img {
   width: 100%;
   height: 13.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-.page__header figcaption {
+.page__header figure figcaption {
   display: grid;
   grid-template-columns: 1fr 40px 15px;
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
   grid-template-rows: 30px 40px;
   width: 100%;
   position: relative;
-  bottom: 1rem;
   background-color: #eeeeee;
   border-radius: 1.25rem 1.25rem 0 0;
 }
-.page__header h1 {
+.page__header figure h1 {
   font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
   padding: 1.75rem 0.625rem 0 0.625rem;
   font-size: 1.25rem;
 }
 @media screen and (min-width: 680px) {
-  .page__header h1 {
+  .page__header figure h1 {
     text-align: center;
     font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 1450px) {
-  .page__header h1 {
+  .page__header figure h1 {
     margin: 0 auto 40px auto;
     font-size: 1.875rem;
   }
 }
-.page__header .btn-empty {
+.page__header figure .btn-empty {
   grid-column-start: 2;
   grid-row-start: 2;
   align-self: center;
   font-size: 1.3rem;
   color: #7E7E7E;
 }
-.page__header .btn-full {
+.page__header figure .btn-full {
   grid-column-start: 2;
   grid-row-start: 2;
   align-self: center;
@@ -185,7 +179,7 @@ header img {
   color: #9356DC;
   opacity: 0;
 }
-.page__header .btn-full:hover {
+.page__header figure .btn-full:hover {
   cursor: pointer;
   opacity: 1;
   transition: opacity 2000ms;
@@ -300,8 +294,7 @@ header img {
   align-items: center;
   flex-wrap: wrap;
   background-color: #eeeeee;
-  -webkit-animation: home-page 3s 0s linear forwards;
-          animation: home-page 3s 0s linear forwards;
+  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1450px) {
   .page__container {
@@ -397,12 +390,10 @@ header img {
   justify-content: center;
   align-items: center;
   transform-origin: right;
-  -webkit-animation: btn-appear 500ms;
-          animation: btn-appear 500ms;
+  animation: btn-appear 500ms;
 }
 .page__container .block1 li a:hover .check, .page__container .block2 li a:hover .check, .page__container .block3 li a:hover .check {
-  -webkit-animation: check 800ms;
-          animation: check 800ms;
+  animation: check 800ms;
 }
 .page__container .block1 li a:hover .block__number, .page__container .block2 li a:hover .block__number, .page__container .block3 li a:hover .block__number {
   justify-content: start;
@@ -457,18 +448,15 @@ header img {
 }
 
 .block1 {
-  -webkit-animation: card 0ms 500ms both;
-          animation: card 0ms 500ms both;
+  animation: card 0ms 500ms both;
 }
 
 .block2 {
-  -webkit-animation: card 0ms 1250ms both;
-          animation: card 0ms 1250ms both;
+  animation: card 0ms 1250ms both;
 }
 
 .block3 {
-  -webkit-animation: card 0ms 1750ms both;
-          animation: card 0ms 1750ms both;
+  animation: card 0ms 1750ms both;
 }
 
 html, body {
@@ -506,15 +494,6 @@ html, body {
   font-weight: normal;
   font-style: normal;
 }
-@-webkit-keyframes btn-appear {
-  from {
-    opacity: 1;
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
 @keyframes btn-appear {
   from {
     opacity: 1;
@@ -524,33 +503,12 @@ html, body {
     transform: scaleX(1);
   }
 }
-@-webkit-keyframes check {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes check {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes home-page {
-  0% {
-    transform: translateX(-9999px);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes home-page {
@@ -563,16 +521,6 @@ html, body {
     opacity: 0;
   }
   100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes ball {
-  0% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100px);
     opacity: 1;
   }
 }
@@ -617,8 +565,7 @@ html, body {
 /*bouton "commander page restaurant */
 .order {
   background-color: #eeeeee;
-  -webkit-animation: home-page 3s 0s linear forwards;
-          animation: home-page 3s 0s linear forwards;
+  animation: home-page 3s 0s linear forwards;
 }
 .order .block__form {
   text-align: center;
@@ -664,8 +611,7 @@ html, body {
   background-color: #99E2D0;
   border-radius: 10%;
   opacity: 0;
-  -webkit-animation: ball 0.4s 100ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
-          animation: ball 0.4s 100ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+  animation: ball 0.4s 100ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
 }
 .loader .ball-2 {
   height: 20px;
@@ -674,8 +620,7 @@ html, body {
   background-color: #9356DC;
   border-radius: 10%;
   opacity: 0;
-  -webkit-animation: ball 0.4s 300ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
-          animation: ball 0.4s 300ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+  animation: ball 0.4s 300ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
 }
 .loader .ball-3 {
   height: 20px;
@@ -684,14 +629,12 @@ html, body {
   background-color: #FF79DA;
   border-radius: 10%;
   opacity: 0;
-  -webkit-animation: ball 0.4s 500ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
-          animation: ball 0.4s 500ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+  animation: ball 0.4s 500ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
 }
 
 .search {
   padding: 0.625rem 0 2.5rem 0;
-  -webkit-animation: home-page 3s 0s linear forwards;
-          animation: home-page 3s 0s linear forwards;
+  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1450px) {
   .search {
@@ -745,8 +688,7 @@ a {
   padding-top: 0.9rem;
   padding-bottom: 2.7rem;
   background-color: #f6f6f6;
-  -webkit-animation: home-page 3s 0s linear forwards;
-          animation: home-page 3s 0s linear forwards;
+  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1450px) {
   .container {
@@ -793,8 +735,7 @@ a {
 .container__result__card img {
   width: 18rem;
   height: 9.4rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 1.25rem 1.25rem 0 0;
   box-shadow: 2px 4px 10px #cccccc;
 }
@@ -881,3 +822,5 @@ a {
   opacity: 1;
   transition: opacity 1500ms;
 }
+
+/*# sourceMappingURL=style.css.map */

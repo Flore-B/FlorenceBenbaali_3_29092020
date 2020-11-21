@@ -26,6 +26,7 @@ header img {
 }
 /* En-tête pages restaurants */
 .page__header {
+    figure {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -41,7 +42,6 @@ header img {
         grid-template-rows: 30px 40px;
         width: 100%;
         position: relative;
-        bottom: 1rem;
         background-color: #eeeeee;
         border-radius: 1.25rem 1.25rem 0 0;
         
@@ -71,3 +71,4 @@ header img {
         }
            }
     }
+}
