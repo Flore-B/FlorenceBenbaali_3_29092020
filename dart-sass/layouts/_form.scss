@@ -1,7 +1,11 @@
 /* Formulaire page accueil */
 .search__form {
     background-color: $color_form;
-    box-shadow: inset 0 4px 4px -4px $color-shadow;
+    box-shadow: inset 0 4px 4px -3px $color-shadow;
+    i {
+        @include icon;
+        top: 16px;
+       }
     .search__place {
         position: relative;
         width: 10.5rem;
@@ -14,15 +18,10 @@
        border: none;
        text-align: center;
        font-family: $text-title-font;
+       padding-left: 10px;
        font-size: 0.938rem;
        @include medium {
            font-size: 1.1rem;
-           text-align: left;
-           padding-left: 20px;
        }
-    }
-    .input__icon {
-        @include icon;
-        top: 1rem;
-       }
+    } 
    }

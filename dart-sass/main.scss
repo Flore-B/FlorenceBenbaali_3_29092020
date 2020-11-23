@@ -86,7 +86,7 @@
         color: $color-light;
         }
 
-.container {
+.content {
     padding-top: 0.9rem;
     padding-bottom: 2.7rem;
     background-color: $color-main-bg;
@@ -102,10 +102,13 @@
         }
     }
 }
-.container__result {
+.content__result {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   @include large {
+    justify-content: space-around;
+}
    a {
         text-decoration: none;
         color: $color-dark;
@@ -115,22 +118,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 20rem;
-        margin: 0.62rem;
-        @include large {
-            width:28rem;
-            margin: 3rem;
+        width: 18rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        border-radius: 1.25rem;
+        box-shadow: $shadow-light;
+        &:hover {
+            box-shadow: $shadow-dark;
         }
     img {
         width: 18rem;
         height: 9.4rem;
         object-fit: cover;
         border-radius: 1.25rem 1.25rem 0 0;
-        box-shadow: $shadow-light;
         @include large {
-            width: 28rem;
-            height: 14rem;
-            margin-right: 1rem;
+            height: 12rem;
         }
 }
     h4 {
@@ -140,24 +142,15 @@
         position: absolute;
         right: 1.25rem;
         padding: 0.31rem 0.62rem;
-        @include large {
-            font-size: 1.2rem;
-        }
     }
     figcaption {
         @include legend;
         grid-template-rows: auto;
         width: 18rem;
         height: 4.4rem;
-        background-color: $color-light;
         border-radius: 0 0 1.25rem 1.25rem;
-        box-shadow: $shadow-light;
-        &:hover {
-            box-shadow: $shadow-dark;
-        }
+        background-color: $color-light;
         @include large {
-            width: 28rem;
-            margin-right: 1rem;
             background-color: $color-main-bg;
         }
         h3 {
@@ -165,18 +158,12 @@
             grid-row-start:2;
             margin: 0.62rem 0.62rem 0 0.62rem;
             font-size: map-get($font-size, h3);
-            @include large {
-                font-size: 1.2rem;
-            }
         }
         p {
             grid-column-start: 1;
             grid-row-start:3;
             margin: 0 0 0.62rem 0.62rem;
             color: $color-icon;
-            @include large {
-                font-size: 1.2rem;
-            }
         }
         .btn-empty {
             @include btn-empty;
