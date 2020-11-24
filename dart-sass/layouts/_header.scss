@@ -1,7 +1,6 @@
 /* En-tête avec logo */
 header {
     position: relative;
-    animation: $anim-home-hidden;
 
     i { 
     position: absolute;
@@ -20,7 +19,6 @@ header img {
     margin-top: 1.25rem;
     margin-bottom: 0.625rem;
     background-color: $color-light;
-    animation: $anim-home-hidden;
     @include medium {
         width: 30%;
     }
@@ -32,7 +30,6 @@ header img {
     background-color: $color-main-bg;
     position: relative;
     margin: 0;
-    animation: $anim-home-hidden;
     img {
         width: 100%;
         height: 15.5rem;

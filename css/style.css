@@ -36,7 +36,6 @@ footer {
   flex-direction: column;
   background-color: #000;
   color: #fff;
-  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 640px) {
   footer {
@@ -97,7 +96,6 @@ footer i {
 /* En-tête avec logo */
 header {
   position: relative;
-  animation: home-page 3s 0s linear forwards;
 }
 header i {
   position: absolute;
@@ -116,7 +114,6 @@ header img {
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
   background-color: #fff;
-  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 640px) {
   header img {
@@ -130,7 +127,6 @@ header img {
   background-color: #F6F6F6;
   position: relative;
   margin: 0;
-  animation: home-page 3s 0s linear forwards;
 }
 .page__header figure img {
   width: 100%;
@@ -296,7 +292,6 @@ header img {
   flex-wrap: wrap;
   margin-top: 20px;
   background-color: #F6F6F6;
-  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1280px) {
   .page__container {
@@ -527,6 +522,17 @@ html, body {
     opacity: 1;
   }
 }
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes ball {
   0% {
     transform: translateY(0px);
@@ -534,7 +540,7 @@ html, body {
   }
   100% {
     transform: translateY(100px);
-    opacity: 1;
+    opacity: 0.5;
   }
 }
 @keyframes card {
@@ -576,7 +582,6 @@ html, body {
 /*bouton "commander" page restaurant */
 .order {
   background-color: #F6F6F6;
-  animation: home-page 3s 0s linear forwards;
 }
 .order .block__form {
   text-align: center;
@@ -611,18 +616,36 @@ html, body {
 }
 
 .loader {
-  top: 50%;
-  left: 40%;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  background-color: #fff;
+  z-index: 9999;
+  animation: loader 3s;
 }
 .loader .ball-1 {
   height: 20px;
   width: 20px;
   display: inline-block;
+  position: absolute;
+  left: 40%;
+  top: 50%;
   background-color: #99E2D0;
   border-radius: 10%;
   opacity: 0;
   animation: ball 0.4s 100ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+}
+@media screen and (min-width: 640px) {
+  .loader .ball-1 {
+    left: 46%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .loader .ball-1 {
+    left: 48%;
+  }
 }
 .loader .ball-2 {
   height: 20px;
@@ -630,6 +653,9 @@ html, body {
   display: inline-block;
   background-color: #9356DC;
   border-radius: 10%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   opacity: 0;
   animation: ball 0.4s 300ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
 }
@@ -639,13 +665,25 @@ html, body {
   display: inline-block;
   background-color: #FF79DA;
   border-radius: 10%;
+  position: absolute;
+  left: 60%;
+  top: 50%;
   opacity: 0;
   animation: ball 0.4s 500ms 7 cubic-bezier(1, -0.03, 1, 0.38) alternate;
+}
+@media screen and (min-width: 640px) {
+  .loader .ball-3 {
+    left: 54%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .loader .ball-3 {
+    left: 52%;
+  }
 }
 
 .search {
   padding: 0.625rem 0 2.5rem 0;
-  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1280px) {
   .search {
@@ -699,7 +737,6 @@ a {
   padding-top: 0.9rem;
   padding-bottom: 2.7rem;
   background-color: #F6F6F6;
-  animation: home-page 3s 0s linear forwards;
 }
 @media screen and (min-width: 1280px) {
   .content {

@@ -92,7 +92,6 @@
     flex-wrap: wrap;
     margin-top: 20px;
     background-color: $color-main-bg; 
-    animation: $anim-home-hidden;
     @include large {
         flex-direction: row;
         align-items: flex-start;
