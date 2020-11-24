@@ -38,3 +38,11 @@
         opacity: 1;
     }
 }
+@keyframes card {
+    from {
+        transform: translate(-9999px);
+    }
+    to {
+        transform: translate(0);
+    }
+} 

@@ -450,15 +450,15 @@ header img {
 }
 
 .block1 {
-  animation: card 0ms 500ms both;
+  animation: card 0s 3000ms both;
 }
 
 .block2 {
-  animation: card 0ms 1250ms both;
+  animation: card 0s 3750ms both;
 }
 
 .block3 {
-  animation: card 0ms 1750ms both;
+  animation: card 0s 4500ms both;
 }
 
 html, body {
@@ -535,6 +535,14 @@ html, body {
   100% {
     transform: translateY(100px);
     opacity: 1;
+  }
+}
+@keyframes card {
+  from {
+    transform: translate(-9999px);
+  }
+  to {
+    transform: translate(0);
   }
 }
 /*bouton "explorer" menu accueil */
