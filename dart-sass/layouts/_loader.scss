@@ -11,14 +11,12 @@
         &-1{
         height: 20px;
         width: 20px;
-        display: inline-block;
         position: absolute;
-        left: 40%;
+        left: 42%;
         top: 50%; 
         background-color: $color-tertiary;
         border-radius: 10%;
-        opacity: 0;
-        animation: ball 0.3s 100ms 7 cubic-bezier(1,-0.03,1,.38) alternate;
+        animation: ball 0.3s cubic-bezier(1,-0.03,1,.38) 100ms infinite alternate;
         @include medium {
             left: 46%;
         }
@@ -29,14 +27,12 @@
     &-2 {
         height: 20px;
         width: 20px;
-        display: inline-block; 
         background-color: $color-primary;
         border-radius: 10%;
         position: absolute;
         left: 50%;
         top: 50%; 
-        opacity: 0;
-        animation: ball 0.3s 300ms 7 cubic-bezier(1,-0.03,1,.38) alternate;
+        animation: ball 0.3s cubic-bezier(1,-0.03,1,.38) 300ms infinite alternate;
     }
     &-3 {
         height: 20px;
@@ -45,10 +41,9 @@
         background-color: $color-secondary;
         border-radius: 10%;
         position: absolute;
-        left: 60%;
+        left: 58%;
         top: 50%; 
-        opacity: 0;
-        animation: ball 0.3s 500ms 7 cubic-bezier(1,-0.03,1,.38) alternate;
+        animation: ball 0.3s cubic-bezier(1,-0.03,1,.38) 500ms infinite alternate;
         @include medium {
             left: 54%;
         }
