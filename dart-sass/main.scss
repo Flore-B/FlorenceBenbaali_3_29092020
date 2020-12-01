@@ -1,15 +1,16 @@
 
 @import "./utils/variables";
 @import "./utils/mixins.scss";
+@import "./base/base.scss";
+@import "./base/fonts.scss";
+@import "./base/animations.scss";
+@import "./components/buttons.scss";
 @import "./layouts/form.scss";
 @import "./layouts/footer.scss";
 @import "./layouts/header.scss";
 @import "./layouts/navs.scss";
 @import "./layouts/loader.scss";
-@import "./base/base.scss";
-@import "./base/fonts.scss";
-@import "./base/animations.scss";
-@import "./components/buttons.scss";
+
 
 /* Présentation des 4 restaurants */
 .content {
@@ -82,20 +83,25 @@
             grid-column-start: 1;
             grid-row-start:2;
             margin: 0.62rem 0.62rem 0 0.62rem;
+            font-family: $text-title-font;
+            font-weight: 600;
             font-size: map-get($font-size, h3);
         }
         p {
             grid-column-start: 1;
             grid-row-start:3;
             margin: 0 0 0.62rem 0.62rem;
-            color: $color-icon;
+            font-family: $text-font;
+            font-size: map-get($font-size, p);
+            color: lighten($color-dark, 35%);
         }
         .btn-empty {
             @include btn-empty;
+            align-self: flex-end;
         }
         .btn-full {
             @include btn-full;
-            
+            align-self: flex-end;
             &:hover {
                 opacity: 1;
                 transition: opacity 1500ms;

@@ -18,17 +18,17 @@
     h1 {
         font-family: $text-title-font;
         font-weight: bold;
-        font-size: map-get($font-size, h1);
+        font-size: 1.25rem;
         margin: 0 2.5rem;
         padding-top: 24px;
         @include medium {
             font-size: 1.6rem;
         }
         }
-        h4 {
-            @include h4;
-            font-weight: normal;
-            color: $color-icon;
+        h3 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: lighten($color-dark, 35%);
             @include medium {
                 font-size: 1.1rem;
             }
@@ -129,7 +129,7 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    padding-bottom: 1.75rem;
     background-color: $color-main-bg; 
     @include large {
         flex-direction: row;
@@ -137,23 +137,25 @@
     }
     .block1, .block2, .block3 {
         font-family: $text-font;
-        h2 {
-            $color-font-h3: #8E8E8E;
-            color: $color-font-h3;
-            font-size: map-get($font-size, h2);
-            border-bottom: 0.25rem solid $color-tertiary;
-            padding-bottom: 0.313rem;
-            width: 3rem;
+        h3 {
+            color: lighten($color-dark, 40%);
+            font-size: 0.85rem;
+            font-weight: lighter;
+            border-bottom: 0.2rem solid $color-tertiary;
+            padding-bottom: 0.2rem;
+            padding-top: 1rem;
+            margin: 0;
+            width: 2rem;
             }
         ul {
             padding: 0;
-            margin-bottom: 1.75rem; 
             }
         li {
             position: relative;
             height: 45px;
             width: 301px;
             list-style-type: none;
+            line-height: 1.5rem;
             border-radius: 1.125rem;
             background-color: $color-light;
             box-shadow: $shadow-light;
@@ -177,7 +179,10 @@
                 grid-row: 1;
                 padding: 0.625rem 0 0 0.625rem;
                 margin: 0;
-                @include h4;
+                font-family: $text-font;
+                font-size: 0.95rem;
+                line-height: 1rem;
+                font-weight: bold;
                 @include large {
                     font-size: 1rem;
                 }
@@ -187,14 +192,16 @@
                 grid-row-start: 3;
                 padding: 0 0 0 0.625rem;
                 margin: 0;
-                font-size: 0.77rem;
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: lighten($color-dark, 30%);
                 @include large {
                     font-size: 0.9rem;
                 }
             }
             a {
                 display: grid;
-                grid-template-columns: 210px 20px 56px 15px;
+                grid-template-columns: 210px 20px 50px 21px;
                 grid-template-rows: auto;
                 text-decoration: none;
                 color: $color-dark;
@@ -257,7 +264,7 @@
             grid-column-start: 3;
             grid-row-start: 3;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             font-size: 0.77rem;
             font-weight: bold;
             @include large {

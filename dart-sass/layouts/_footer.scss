@@ -6,19 +6,12 @@ footer {
     @include medium {
         align-items: center;
     }
-    img {
-        font-family: $logo-font;
-        width: 120px;
-        padding-top: 1.25rem;
-        margin: 0 0  0.875rem 1.25rem;
-        @include medium {
-            width: 200px;
-            margin: 0;
-        }
-        @include large {
-            width: 250px;
-        }
-    }
+   h3 {
+       font-family: $logo-font;
+       font-size: map-get($font-size, h3);
+       font-weight: 100;
+       padding-left: 20px;
+   }
     ul {
         padding: 0 0 1.75rem 1.25rem;
         margin: 0;

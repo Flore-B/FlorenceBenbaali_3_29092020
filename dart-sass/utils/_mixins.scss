@@ -11,7 +11,7 @@
 @mixin icon {
     position: absolute;
     color: $color-icon;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 @mixin medium {
     @media screen and (min-width: map-get($breakpoints, medium)) {
@@ -26,19 +26,16 @@
 @mixin legend {
     display: grid;
     grid-template-columns: 1fr 40px 15px;
-    font-family: $text-font;
 }
 @mixin btn-empty {
         grid-column-start: 2;
         grid-row-start:2;
-        align-self: center;
         font-size: 1.3rem;
         color: $color-icon;
 }
 @mixin btn-full {
         grid-column-start: 2;
         grid-row-start:2;
-        align-self: center;
         font-size: 1.3rem;
         display: flex;
         background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
