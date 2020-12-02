@@ -1,6 +1,6 @@
 @mixin title-h2 {
     font-family: $text-title-font;
-    font-weight: bold;
+    font-weight: 200;
     margin: 0 0 0.625rem 1.25rem; 
     font-size: map-get($font-size, h2)
 }

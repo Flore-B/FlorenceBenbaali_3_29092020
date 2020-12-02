@@ -1,6 +1,6 @@
 /* Menu de navigation page accueil */
 .search {
-    padding: 0.625rem 0 2.5rem 0;
+    padding-bottom: 2.5rem;
     @include large {
         padding-bottom: 4rem;
         background-color: $color-light;
@@ -17,8 +17,9 @@
     }
     h1 {
         font-family: $text-title-font;
-        font-weight: bold;
         font-size: 1.25rem;
+        font-weight: 200;
+        line-height: 1.2em;
         margin: 0 2.5rem;
         padding-top: 24px;
         @include medium {
@@ -152,7 +153,7 @@
             }
         li {
             position: relative;
-            height: 45px;
+            height: 48px;
             width: 301px;
             list-style-type: none;
             line-height: 1.5rem;
@@ -179,10 +180,10 @@
                 grid-row: 1;
                 padding: 0.625rem 0 0 0.625rem;
                 margin: 0;
-                font-family: $text-font;
-                font-size: 0.95rem;
+                font-family: $card-title-font;
+                font-size: 0.96rem;
                 line-height: 1rem;
-                font-weight: bold;
+                font-weight: 600;
                 @include large {
                     font-size: 1rem;
                 }
@@ -193,7 +194,7 @@
                 padding: 0 0 0 0.625rem;
                 margin: 0;
                 font-size: 0.8rem;
-                font-weight: 500;
+                font-weight: lighter;
                 color: lighten($color-dark, 30%);
                 @include large {
                     font-size: 0.9rem;
@@ -247,7 +248,7 @@
                 display: none;
                 height: 100%;
                 right: 0;
-                width: 40px;
+                width: 45px;
                 border-radius: 0 1.125rem 1.125rem 0;
                 background-color: $color-tertiary;
                 @include medium{

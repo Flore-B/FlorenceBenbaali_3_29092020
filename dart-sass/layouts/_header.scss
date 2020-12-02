@@ -15,7 +15,7 @@ header img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.625rem;
-    width: 45%;
+    width: 40%;
     margin-top: 1.25rem;
     margin-bottom: 0.625rem;
     background-color: $color-light;
@@ -42,16 +42,19 @@ header img {
         position: absolute;
         top: 180px;
         background-color:$color-main-bg;
-        border-radius: 1.25rem 1.25rem 0 0; 
+        border-radius: 1.75rem 1.75rem 0 0; 
     }
     h1 {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: flex-end;
         font-family: $logo-font;
         font-weight: normal;
         padding: 0.3rem 0.625rem 0 0.625rem;
         font-size: map-get($font-size, h1);
         @include medium {
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
         }
         @include large {
             margin: 0 auto 40px auto;
@@ -59,6 +62,7 @@ header img {
             }
             }
     .btn-empty {
+
         @include btn-empty;
         align-self: flex-start;
         }
