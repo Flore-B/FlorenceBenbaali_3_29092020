@@ -20,7 +20,7 @@ header img {
     margin-bottom: 0.625rem;
     background-color: $color-light;
     @include medium {
-        width: 30%;
+        width: 20%;
     }
 }
 /* En-tête pages restaurants */
@@ -43,6 +43,9 @@ header img {
         top: 180px;
         background-color:$color-main-bg;
         border-radius: 1.75rem 1.75rem 0 0; 
+        @include large {
+            padding-top: 1rem;
+        }
     }
     h1 {
         grid-column: 1;
@@ -58,17 +61,21 @@ header img {
         }
         @include large {
             margin: 0 auto 40px auto;
-            font-size: 1.875rem;
             }
             }
     .btn-empty {
-
         @include btn-empty;
         align-self: flex-start;
+        @include large{
+            grid-row-start: 1;
+        }
         }
     .btn-full {
         @include btn-full;
         align-self: flex-start;
+        @include large{
+            grid-row-start: 1;
+        }
         &:hover {
             cursor: pointer;
             opacity: 1;
