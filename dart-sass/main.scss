@@ -1,264 +1,113 @@
-@font-face {
-    font-family: 'shrikhandregular';
-    src: url('../fonts/shrikhand-regular-webfont.eot');
-    src: url('../fonts/shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('../fonts/shrikhand-regular-webfont.woff') format('woff'),
-         url('../fonts/shrikhand-regular-webfont.ttf') format('truetype'),
-         url('../fonts/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'robotoregular';
-    src: url('../fonts/roboto-regular-webfont.eot');
-    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
-         url('../fonts/roboto-regular-webfont.woff') format('woff'),
-         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
-         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'robotobold';
-    src: url('../fonts/roboto-bold-webfont.eot');
-    src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
-         url('../fonts/roboto-bold-webfont.woff') format('woff'),
-         url('../fonts/roboto-bold-webfont.ttf') format('truetype'),
-         url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
-}
-@font-face {
-    font-family: 'robotoblack';
-    src: url('../fonts/roboto-black-webfont.eot');
-    src: url('../fonts/roboto-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-black-webfont.woff2') format('woff2'),
-         url('../fonts/roboto-black-webfont.woff') format('woff'),
-         url('../fonts/roboto-black-webfont.ttf') format('truetype'),
-         url('../fonts/roboto-black-webfont.svg#robotoblack') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 @import "./utils/variables";
+@import "./utils/mixins.scss";
+@import "./base/base.scss";
+@import "./base/fonts.scss";
+@import "./base/animations.scss";
+@import "./components/buttons.scss";
+@import "./layouts/form.scss";
+@import "./layouts/footer.scss";
+@import "./layouts/header.scss";
+@import "./layouts/navs.scss";
+@import "./layouts/loader.scss";
 
-html, body {
-    padding: 0;
-    margin: 0;
-}
-header img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-top: 20px;
-}
-.search {
-    margin-bottom: 40px;
-}
-.search__form {
-    display: flex;
-    background-color: #E1DFDF;
-   &__search__input {
-       width: 100%;
-       height: 50px;
-       background-color: transparent;
-       border: none;
-       text-align: center;
-       font-family: $text-font;
-       font-size: 14px;
-       font-weight: bold;
-   }
-   i {
-       position: relative;
-       left: 80px;
-       top: 16px;
-       color: #323232;
-       align-self: baseline;
-   }
-    }
-    .search__heading {
-        height:250px;
-        font-family: $text-font;
-        text-align: center;
-        background-color: #eeeeee;
-        margin-bottom: 30px;
-        h1 {
-            font-family: $text-title-font;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 0 50px;
-            padding-top: 40px;
-        }
-        p {
-            font-family: $text-title-font;   
-            color: #323232;
-            font-size: 16px;
-            padding-bottom: 20px;
-            margin: 15px;
+
+/* Présentation des 4 restaurants */
+.content {
+    padding-top: 0.9rem;
+    padding-bottom: 2.7rem;
+    background-color: $color-main-bg;
+    @include large {
+        background-color: $color-light    }
+    h2 {
+        @include title-h2;
+        margin-top: 1.5rem;
+        text-align: left;
+        @include large {
+            font-size: 2rem;
         }
     }
-.search__heading-btn {
-    border-radius: 20px;
-    background-color: $color-secondary; 
-    padding: 10px 20px;
-    a {
-        text-decoration: none;
-        color: #fff
-    }
-    }
-.search__nav {
-    h1 {
-        font-family: $text-title-font;
-        font-weight: bold;
-        margin: 20px 0 10px 20px;
-        font-size: 20px;
-    }
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        list-style-type: none;
-        justify-content: center;
-        text-align: center;
-        font-weight: bold;
-        font-size: 14px;
-        padding: 0;
-        margin: 0;
-    }
-    li {
-        display: flex;
-        width: 90%;
-        margin: 10px;
-        margin-right: 20px;
-    }
-    &__icon {
-        padding-right: 15px;
-        color: #646363;
-        font-size: 14px;
-    }
-    &__number {
-        position: absolute;
-        left: 8px;
-        align-self: center;
-        border-radius: 100%;
-        background-color: $color-primary;
-        font-family: $text-font;
-        font-size: 12px;
-        width: 20px;
-        height: 20px;
-        color: #fff;
-    }
-    a {
-        width: 80%;
-        font-family: $text-font;
-        font-size: 14px;
-        border-radius: 18px;
-        text-align: left;
-        background-color: #eeeeee; 
-        box-shadow: 2px 4px 10px #E1DFDF;
-        padding: 20px;
-        text-decoration: none;
-        color: black; 
-        padding-left: 35px;
-
-    }
 }
-.container {
-    height: 1060px;
-    padding-top: 15px;
-    background-color: #eeeeee;
-    h1 {
-        font-family: $text-title-font;
-        font-weight: bold;
-        margin: 20px 0 10px 20px; 
-        font-size: 20px;
-        text-align: left;
-    }
-}
-.container__result {
+.content__result {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   @include large {
+    justify-content: space-around;
+}
+   a {
+        text-decoration: none;
+        color: $color-dark;
+   }
     &__card {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 320px;
-        margin: 10px;
+        width: 18rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        border-radius: 1.25rem;
+        box-shadow: $shadow-light;
+        &:hover {
+            box-shadow: $shadow-dark;
+        }
     img {
-        width: 290px;
-        height: 150px;
+        width: 18rem;
+        height: 9.4rem;
         object-fit: cover;
-        border-radius: 20px 20px 0 0;
-    }
+        border-radius: 1.25rem 1.25rem 0 0;
+        @include large {
+            height: 12rem;
+        }
+}
     h4 {
+        @include h4;
         background-color: $color-tertiary;
-        font-family: $text-font;
-        color: #09b603;
+        color: $dark-font-square-btn;
         position: absolute;
-        right: 20px;
-        padding: 5px 10px;
-        font-size: 14px;
-    
+        right: 1.25rem;
+        padding: 0.31rem 0.62rem;
     }
     figcaption {
-        width: 290px;
-        height: 70px;
-        font-family: $text-font;
-        background-color: #fff;
-        border-radius: 0 0 20px 20px;
-        h2 {
-            margin: 10px 10px 0 10px;
-            font-size: 16px;
+        @include legend;
+        grid-template-rows: auto;
+        width: 18rem;
+        height: 4.4rem;
+        border-radius: 0 0 1.25rem 1.25rem;
+        background-color: $color-light;
+        @include large {
+            background-color: $color-main-bg;
+        }
+        h3 {
+            grid-column-start: 1;
+            grid-row-start:2;
+            margin: 0.62rem 0.62rem 0 0.62rem;
+            font-family: $text-title-font;
+            font-size: map-get($font-size, h3);
+            font-weight: 200;
         }
         p {
-            margin: 0 0 10px 10px;
-            color: #646363; 
+            grid-column-start: 1;
+            grid-row-start:3;
+            margin: 0 0 0.62rem 0.62rem;
+            font-family: $text-font;
+            font-size: map-get($font-size, p);
+            color: lighten($color-dark, 35%);
         }
-        i {
-            position: absolute;
-            left: 270px;
-            font-size: 20px;
-            color: #646363;
+        .btn-empty {
+            @include btn-empty;
+            align-self: flex-end;
+        }
+        .btn-full {
+            @include btn-full;
+            align-self: flex-end;
+            &:hover {
+                opacity: 1;
+                transition: opacity 1500ms;
+             }
         }
     }
 } 
 }
-footer {
-    background-color: #000000;
-    color: #fff;
-    p {
-        margin: 0 0  15px 20px;
-    }
-    img {
-        font-family: $logo-font;
-        width: 30%;
-        padding-top: 20px;
-       
-        
-    }
-    ul {
-        padding: 0 0 30px 20px;
-        margin: 0;
-    }
-    li {
-        list-style-type: none;
-        padding-bottom: 5px;
-        
-        
-    }
-    a {
-        text-decoration: none;
-        color: #fff;
-        font-family: $text-font;
-        font-size: 14px;
-    }
-    i {
-        padding-right: 15px;
-        padding-left: 0;
-    }
-}
+

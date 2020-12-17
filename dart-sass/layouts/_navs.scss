@@ -1,0 +1,285 @@
+/* Menu de navigation page accueil */
+.search {
+    padding-bottom: 2.5rem;
+    @include large {
+        padding-bottom: 4rem;
+        background-color: $color-light;
+    }
+}
+.search__heading {
+    height: 220px;
+    font-family: $text-font;
+    line-height: 1.2em;
+    text-align: center;
+    background-color: $color-main-bg;
+    @include large {
+        padding-bottom: 30px;
+    }
+    h1 {
+        font-family: $text-title-font;
+        font-size: 1.25rem;
+        font-weight: 200;
+        line-height: 1.2em;
+        margin: 0 2.5rem;
+        padding-top: 24px;
+        @include medium {
+            font-size: 1.6rem;
+        }
+        }
+        h3 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: lighten($color-dark, 35%);
+            @include medium {
+                font-size: 1.1rem;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $color-light;
+        }
+.search__nav {
+    @include large {
+        background-color: $color-light;
+    }
+    h2 {
+        @include title-h2;
+        margin-top: 2rem;
+        @include medium {
+            padding-top: 1rem;
+        }
+        @include large {
+            font-size: 2rem;
+        }
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        font-weight: bold;
+        padding: 0;
+    }
+    li {
+        display: flex;
+        position: relative;
+        width: 300px;
+        margin: 0.625rem 1.25rem 0.625rem 1.25rem;
+        padding-left: 0.5rem;
+        @include large {
+            width: 30%;
+            margin: 0;
+        }
+    }
+    &__icon {
+        color: $color-icon;
+        padding-right: 0.9rem;
+        font-size: 0.9rem;
+        @include large {
+            font-size: 1.1rem;
+        }
+    }
+    &__number {
+        position: absolute;
+        left: 0;
+        align-self: center;
+        border-radius: 100%;
+        background-color: $color-primary;
+        font-family: $text-font;
+        font-size: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        color: $color-light;
+        @include large {
+            font-size: 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    a {
+        width: 80%;
+        font-family: $text-font;
+        font-size: map-get($font-size, a);
+        border-radius: 1.12rem;
+        text-align: left;
+        background-color: $color-main-bg; 
+        box-shadow: $shadow-light;
+        padding: 1.25rem;
+        text-decoration: none;
+        color: $color-dark; 
+        padding-left: 2.2rem;
+        transition: background-color, box-shadow 300ms;
+        &:hover {
+            background-color: $light-main-btn;
+            box-shadow: $shadow-dark;
+            i {
+            color: $color-primary
+            }
+        }
+        @include large {
+            font-size: 1.2rem;
+        }
+    }
+}
+/* Menu de navigation pages restaurants */
+.page__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 1.75rem;
+    background-color: $color-main-bg; 
+    @include large {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .block1, .block2, .block3 {
+        font-family: $text-font;
+        h3 {
+            color: lighten($color-dark, 40%);
+            font-size: 0.85rem;
+            font-weight: lighter;
+            border-bottom: 0.2rem solid $color-tertiary;
+            padding-bottom: 0.2rem;
+            padding-top: 1rem;
+            margin: 0;
+            width: 2rem;
+            }
+        ul {
+            padding: 0;
+            }
+        li {
+            position: relative;
+            height: 48px;
+            width: 301px;
+            list-style-type: none;
+            line-height: 1.5rem;
+            border-radius: 1.125rem;
+            background-color: $color-light;
+            box-shadow: $shadow-light;
+            padding-bottom: 0.625rem;
+            margin-bottom: 0.875rem; 
+            transition: box-shadow 300ms;
+            @include medium {
+                width: 500px;
+            }
+            @include large {
+                width: 461px;
+                padding-bottom: 1rem;
+                margin-bottom: 2rem; 
+            }
+            &:hover {
+                box-shadow: $shadow-dark;
+            }
+           
+            h4 {
+                grid-column: 1 / span 3;
+                grid-row: 1;
+                padding: 0.625rem 0 0 0.625rem;
+                margin: 0;
+                font-family: $card-title-font;
+                font-size: 0.96rem;
+                line-height: 1rem;
+                font-weight: 600;
+                @include large {
+                    font-size: 1rem;
+                }
+                }
+            p {
+                grid-column: 1 / span 3;
+                grid-row-start: 3;
+                padding: 0 0 0 0.625rem;
+                margin: 0;
+                font-size: 0.8rem;
+                font-weight: lighter;
+                color: lighten($color-dark, 30%);
+                @include large {
+                    font-size: 0.9rem;
+                }
+            }
+            a {
+                display: grid;
+                grid-template-columns: 210px 20px 50px 21px;
+                grid-template-rows: auto;
+                text-decoration: none;
+                color: $color-dark;
+                @include medium {
+                    grid-template-columns: 400px 20px 65px 15px;
+                }
+                @include large {
+                    grid-template-columns: 360px 20px 65px 15px;
+                }
+                &:hover {
+                    & .box, .block__number{
+                    display: flex; 
+                    justify-content: center;
+                    align-items: center;
+                    transform-origin: right;
+                    animation: btn-appear 500ms;
+                    }
+                    & .check {
+                        animation: check 800ms;
+                    }
+                    & .block__number{
+                        justify-content: start;
+                    }
+                    & p, h4 {
+                        grid-column: 1;
+                        transform-origin: none;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    & .ellipse{
+                        display: inline-block; 
+                        @include large {
+                            display: none;
+                        }
+                    }
+                   
+            }
+            }
+           
+            .box {
+                position: absolute;
+                display: none;
+                height: 100%;
+                right: 0;
+                width: 45px;
+                border-radius: 0 1.125rem 1.125rem 0;
+                background-color: $color-tertiary;
+                @include medium{
+                    width: 10%;
+                }
+                }
+            .check {
+                background-color: $color-tertiary;
+                color: $color-light;
+                border-radius: 50%;
+            }
+    } 
+        .block__number {
+            grid-column-start: 3;
+            grid-row-start: 3;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 0.77rem;
+            font-weight: bold;
+            @include large {
+                font-size: 0.9rem;
+            }
+            }   
+            }
+        }
+.block1 {
+    animation: card 0s 3000ms both;
+}
+.block2 {
+    animation: card 0s 3750ms both;
+}
+.block3 {
+    animation: card 0s 4500ms both;
+}

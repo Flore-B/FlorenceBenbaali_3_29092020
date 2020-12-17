@@ -1,0 +1,70 @@
+@mixin title-h2 {
+    font-family: $text-title-font;
+    font-weight: 200;
+    margin: 0 0 0.625rem 1.25rem; 
+    font-size: map-get($font-size, h2)
+}
+@mixin h4 {
+    font-family: $text-font;
+    font-size: map-get($font-size, h4);
+}
+@mixin icon {
+    position: absolute;
+    color: $color-icon;
+    font-size: 0.9rem;
+}
+@mixin medium {
+    @media screen and (min-width: map-get($breakpoints, medium)) {
+        @content;
+    }
+}
+@mixin large {
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        @content;
+    }
+}
+@mixin legend {
+    display: grid;
+    grid-template-columns: 1fr 40px 15px;
+}
+@mixin btn-empty {
+        grid-column-start: 2;
+        grid-row-start:2;
+        font-size: 1.3rem;
+        color: $color-icon;
+}
+@mixin btn-full {
+        grid-column-start: 2;
+        grid-row-start:2;
+        font-size: 1.3rem;
+        display: flex;
+        background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+}
+@mixin btn {
+    width: 200px;
+    border-radius: 1.25rem;
+    border: none;
+    background-image: linear-gradient(170deg, $color-secondary, 70%, $color-primary);
+    box-shadow: $shadow-light;
+    font-family: $text-font;
+    color: $color-light;
+    padding: 12px;
+    transition: transform 1000ms;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: $shadow-dark;
+    }
+}
+@mixin main-btn {
+    @include btn;
+        @include medium {
+            font-size: 1.1rem;
+            width: 250px;
+        }
+        @include large {
+            width: 300px;
+        }
+}
