@@ -1,6 +1,4 @@
 # FlorenceBenbaali_3_29102020
-<<<<<<< HEAD
-=======
 <h1 >Contexte</h1>
 <p>Projet n°3 du parcours "Développeur web" dispensé par OpenClassRooms, il s’agit de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques et intégre des animations CSS, pour le compte d'une jeune startup (ohmyfood).</p>
 <h1>Cahier des  charges</h1>
@@ -55,4 +53,3 @@
 </ul>
 <h1>Notes</h1>
 <p>Utilisation de l’éditeur de texte Visual Studio Code avec les plugins Live Server, Prettier, et Autoprefixer. Utilisation du préprocesseur Sass.</p>
->>>>>>> develop
